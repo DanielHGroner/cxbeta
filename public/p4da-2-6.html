@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cxbase.css">
+        <link rel="stylesheet" href="cxcopy.css">
+        <link rel="stylesheet" href="cxhelp.css">
+        <link rel="stylesheet" href="cxhilite.css">
+        <link rel="stylesheet" href="cxlayout.css">
+    </head>
+    <body>
+        <header><span class="help-span cx-hilitable" id="title"><b>Program 2-8</b>: Calculate BMI from height and weight</span></header>
+        <div id="help-container"></div>
+        <div id="copy-message">Code copied to clipboard</div>
+<div class="container">
+<section class="left"><pre><code id="code"><span class="cx-com"># Calculate BMI, given height and weight</span>
+
+<span class="cx-com"># Prompt for inputs</span>
+<span class="cx-sta cx-hilitable help-span" id="4"><span class="cx-var">height</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">'Enter height (inches): '</span>))</span>
+<span class="cx-sta cx-hilitable help-span" id="5"><span class="cx-var">weight</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">'Enter weight (pounds): '</span>))</span>
+
+<span class="cx-com"># calculate the BMI result</span>
+<span class="cx-sta cx-hilitable help-span" id="8"><span class="cx-var">bmi</span> = <span class="cx-var">weight</span> / (<span class="cx-var">height</span> ** <span class="cx-num">2</span>) * <span class="cx-num">703</span></span>
+
+<span class="cx-com"># display the result</span>
+<span class="cx-sta cx-hilitable help-span" id="11"><span class="cx-fun">print</span>(<span class="cx-str">'BMI = '</span>, <span class="cx-var">bmi</span>)</span>
+</code></pre>
+<button id="copy-button">Copy</button>
+</section>
+<section class="right">
+<span class="cx-varheading">VARIABLES:</span><p>
+<code><table>    
+<tr><td id="-height"></td><td>float</td><td><span id="height" class="cx-var cx-hilitable help-span">height</span></td></tr>
+<tr><td id="-weight"></td><td>float</td><td><span id="weight" class="cx-var cx-hilitable help-span">weight</span></td></tr>
+<tr><td id="-bmi"></td><td>float</td><td><span id="bmi" class="cx-var cx-hilitable help-span">bmi</span></td></tr>
+</table></code>
+</section>
+</div>
+        <footer id="footer">
+            <span id="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span>
+            (c) 2024 Rose River Software, LLC &nbsp;&nbsp;&nbsp;
+        <a href="cx-terms.html" target="_blank">Terms of Use</a> &nbsp;&nbsp;&nbsp;
+        <a href="cx-help.pdf" target="_blank"><button class="cx-button">Help</button></a>
+        </footer>
+        <script src="cxcopy.js"></script>
+        <script src="cxhelp.js" defer></script>
+        <script src="cxhilite.js"></script>
+        <script src="cxhide.js"></script>
+        <script src="p4da-2-6-help.js" defer></script>
+        <script src="p4da-2-6-hilite.js"></script>
+    </body>
+</html>

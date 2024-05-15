@@ -1,0 +1,42 @@
+body {
+    /* margin: 0; */
+    font-family: sans-serif;
+  }
+  
+  header, footer {
+    /* background-color: #ddd; */
+    /* padding: 1rem; */
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    /*flex-grow: 1;*/
+    /*min-height: 100vh; /* Set a minimum height for the container */
+    /*padding-bottom: 60px; /* Add padding-bottom to prevent content overlap */
+    /*border-bottom: 1px solid #ddd; Add a bottom border for the container */
+  }
+  
+  .left {
+    flex: 2;
+  }
+
+  .right {
+    flex: 1;
+    padding: 1rem;
+    /* white-space: nowrap;  /* Optional: remove if you want wrapping in the left section */
+    overflow-x: auto;  /* Add horizontal overflow for the left section if needed */
+    border-left: 1px solid #ddd; /* Add a left border for the right section */
+  }
+  
+  .bottom {
+    display: flex;
+    text-align: center;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  

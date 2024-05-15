@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cxbase.css">
+        <link rel="stylesheet" href="cxcopy.css">
+        <link rel="stylesheet" href="cxhelp.css">
+        <link rel="stylesheet" href="cxhilite.css">
+        <link rel="stylesheet" href="cxlayout.css">
+    </head>
+    <body>
+        <header><span id="title" class="cx-hilitable help-span"><b>Program 4-4</b>: With while, generate BMIs for different weights</span></header>
+        <div id="help-container"></div>
+        <div id="copy-message">Code copied to clipboard</div>
+<div class="container">
+<section class="left"><pre><code id="code"><span class="cx-com"># Using while repetition and a control variable,</span>
+<span class="cx-com"># calculate BMIs for a height and different weights</span>
+
+<span class="cx-statement cx-hilitable help-span" id="4"><span class="cx-var">height</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">'Enter height (inches): '</span>))</span>
+<span class="cx-statement cx-hilitable help-span" id="5"><span class="cx-var">anotherWeight</span> = <span class="cx-str">'y'</span></span> <span class="cx-com"># this is the control variable, for looping</span>
+
+<span class="cx-statement cx-hilitable help-span" id="7"><span class="cx-keyword">while</span> <span class="cx-var">anotherWeight</span> == <span class="cx-str">'y'</span></span>:
+
+    <span class="cx-statement cx-hilitable help-span" id="9"><span class="cx-var">weight</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">'\nEnter weight (pounds): '</span>))</span>
+
+    <span class="cx-statement cx-hilitable help-span" id="11"><span class="cx-var">bmi</span> = <span class="cx-var">weight</span> / <span class="cx-var">height</span>**<span class="cx-num">2</span> * <span class="cx-num">703</span></span>
+    <span class="cx-statement cx-hilitable help-span" id="12"><span class="cx-fun">print</span>(<span class="cx-str">'BMI = '</span>, <span class="cx-fun">round</span>(<span class="cx-var">bmi</span>, <span class="cx-num">1</span>))</span>
+    
+    <span class="cx-statement cx-hilitable help-span" id="14"><span class="cx-var">anotherWeight</span> = <span class="cx-fun">input</span>(<span class="cx-str">'Enter another weight (y/n)? '</span>)</span>
+</code></pre>
+<button id="copy-button">Copy</button>
+</section>
+<section class="right">
+<span class="cx-varheading">VARIABLES:</span><code><p>
+<table>    
+<tr><td></td><td>str</td><td><span id="anotherWeight" class="cx-var cx-hilitable help-span">anotherWeight</span></td></tr>
+<tr><td></td><td>float</td><td><span id="height" class="cx-var cx-hilitable help-span">height</span></td></tr>
+<tr><td></td><td>float</td><td><span id="weight" class="cx-var cx-hilitable help-span">weight</span></td></tr>
+<tr><td></td><td>float</td><td><span id="bmi" class="cx-var cx-hilitable help-span">bmi</span></td></tr>
+</table></code>
+</section>
+</div>
+        <footer id="footer">
+            <span id="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span>
+             (c) 2024 Rose River Software, LLC &nbsp;&nbsp;
+             <a href="cx-terms.html" target="_blank">Terms of Use</a> &nbsp;&nbsp;&nbsp;
+             <a href="cx-help.pdf" target="_blank"><button class="cx-button">Help</button></a>
+        </footer>
+        <script src="cxcopy.js"></script>
+        <script src="cxhelp.js" defer></script>
+        <script src="cxhilite.js"></script>
+        <script src="cxhide.js"></script>
+        <script src="p4da-4-4-help.js"></script>
+        <script src="p4da-4-4-hilite.js"></script>
+    </body>
+</html>
