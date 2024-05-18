@@ -19,6 +19,7 @@ body {
   
   .left {
     flex: 2;
+    padding-left:40px;
   }
 
   .right {
@@ -39,4 +40,11 @@ body {
     bottom: 0;
     width: 100%;
   }
-  
+
+svg { /* add this to establish canvas position/size */
+  position: absolute;
+  top: 0;
+  left: 2;
+  width: 40px;
+  height: 100%;
+}
