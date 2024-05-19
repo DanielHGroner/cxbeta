@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const helpSpans = document.querySelectorAll(".help-span");
     let isDragging = false;
     let offsetX, offsetY;
-  
+    
     // Display help text when a span is clicked
     helpSpans.forEach(span => {
       //console.log(span);
@@ -20,17 +20,18 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to display help text
     function showHelp(span, text) {
       helpContainer.innerHTML = text || "No help text available.";
-      helpContainer.style.display = "block";
+      if (helpDisplaying)
+         helpContainer.style.display = "block";
+      else
+         helpContainer.style.display = "none";
 
       const spanRect = span.getBoundingClientRect();
-      const helpRect = helpContainer.getBoundingClientRect();
+      //const helpRect = helpContainer.getBoundingClientRect();
       
       // Calculate the position to place the help container next to the span
-      let leftOffset = spanRect.right + window.pageXOffset;
-      let topOffset = spanRect.top + window.pageYOffset + (spanRect.height - helpRect.height) / 2;
-      
+      let leftOffset = spanRect.right + window.scrollY;
+      let topOffset = spanRect.bottom;
       console.log(leftOffset, topOffset);
-      if (topOffset < 0) {topOffset = 10};
 
       helpContainer.style.left = `${leftOffset}px`;
       helpContainer.style.top = `${topOffset}px`;

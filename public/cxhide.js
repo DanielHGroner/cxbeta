@@ -8,3 +8,9 @@ logo.addEventListener('click', function() {
     rightSection.style.display = 'none';
   }
 });
+
+var helpDisplaying = true;
+const copyright = document.getElementById('copyright');
+copyright.addEventListener('click', function() {
+  helpDisplaying = !helpDisplaying;
+});
