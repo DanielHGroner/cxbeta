@@ -17,7 +17,7 @@ const allhelp = {
      "both a string, as well as the value stored in the variable "+
      "<span class='cx-var'>total</span>.",
 
-     "calcTotal.numberItems": "The parameter numberItems is the input to the <span class='cx-fun'>calcTotal()</span> function. "+
+     "calcTotal.numberItems": "The parameter <span class='cx-var'>numberItems</span> is the input to the <span class='cx-fun'>calcTotal()</span> function. "+
                               "Note this variable is known only within the <span class='cx-fun'>calcTotal()</span> function, "+
                               "but not known elsewhere in the program.",
      "calcTotal.totalCost": "This variable is the calculated cost based on the passed-in parameter <span class='cx-var'>numberItems</span> and "+
@@ -27,7 +27,7 @@ const allhelp = {
      "count":"This variable stores the number of books, as entered by the user.",
      "total":"This variable is the total cost for the purchased books.",
 
-     "display:": "-",
+     "display": "-",
      "keyboard": "-" 
 };
   
