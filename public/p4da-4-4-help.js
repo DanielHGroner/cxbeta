@@ -33,6 +33,9 @@ const allhelp = {
     "bmi": "This variable stores bmi. "+
        "It is calculated based on height and weight, and then displayed.",
     "anotherWeight": "This variable controls whether the while statement "+
-       "repeats, in order to add another result of a weight and its corresponding BMI."
+       "repeats, in order to add another result of a weight and its corresponding BMI.",
+
+       "display:": "-",
+       "keyboard": "-"   
 };
   

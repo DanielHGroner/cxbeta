@@ -25,6 +25,10 @@ const allhelp = {
     "weight": "This variable stores weight (in pounds). "+
               "It is entered by the user and used subsequently in the calculation of BMI.",
     "bmi": "This variable stores bmi. "+
-           "It is calculated based on <span class='cx-var'>height</span> and <span class='cx-var'>weight</span>, and subsequently displayed at the end of the program."
-  };
+           "It is calculated based on <span class='cx-var'>height</span> and <span class='cx-var'>weight</span>, and subsequently displayed at the end of the program.",
+
+     "display": "-",
+     /*"keyboard": "The keyboard is used to reply to input prompts."*/
+     "keyboard": "-"
+};
   

@@ -25,6 +25,9 @@ const allhelp = {
                             "Note this variable is known only within the <span class='cx-fun'>calcTotal()</span> function, "+
                             "but not known elsewhere in the program.",
      "count":"This variable stores the number of books, as entered by the user.",
-     "total":"This variable is the total cost for the purchased books."
+     "total":"This variable is the total cost for the purchased books.",
+
+     "display:": "-",
+     "keyboard": "-" 
 };
   

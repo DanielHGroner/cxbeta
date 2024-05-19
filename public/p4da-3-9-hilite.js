@@ -1,6 +1,6 @@
 const allhilite2 = {
-   "5": [">customer"],
-   "8": [">invest"],
+   "5": [">customer", ">display", "<keyboard"],
+   "8": [">invest", ">display", "<keyboard"],
    "10": ["<customer"],
    "12": ["<invest"],
    "13": [">interestRate"],
@@ -8,12 +8,16 @@ const allhilite2 = {
    "15": [">interestRate"],
    "17": [">interestRate"],   
    "20": [">endBalance", "<interestRate", "<invest"],
-   "23": ["<interestRate"],
-   "24": ["<endBalance"],
+   "23": ["<interestRate", ">display"],
+   "24": ["<endBalance", ">display"],
+
    "customer": ["5", "10"],
    "invest": ["8", "12", "20"],
    "interestRate": ["13", "15", "17", "20", "23"],
-   "endBalance": ["20", "24"]
+   "endBalance": ["20", "24"],
+
+   "display": ["5", "8", "23", "24"],
+   "keyboard": ["5", "8"]
 };
 
 const allhilite3 = {

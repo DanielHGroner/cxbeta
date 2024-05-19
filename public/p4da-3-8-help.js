@@ -26,6 +26,9 @@ const allhelp = {
     "interestRate": "This variable stores the interest rate (in percent). "+
               "It is determined in the <span class='cx-key'>if</span>/<span class='cx-key'>elif</span>/<span class='cx-key'>else</span> section based on the investment amount.",
     "endBalance": "This variable stores the ending balance. "+
-           "It is calculated based on the initial investment and interest rate, and is displayed at the end of the program."
-  };
+           "It is calculated based on the initial investment and interest rate, and is displayed at the end of the program.",
+
+    "display": "-",
+    "keyboard": "-"
+};
   

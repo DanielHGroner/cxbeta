@@ -35,6 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
       helpContainer.style.left = `${leftOffset}px`;
       helpContainer.style.top = `${topOffset}px`;
+
+      // empty help
+      if (text == '-' || text == '') {helpContainer.style.display = "none";}
     }
   
     // Function to handle mouse down event on help container

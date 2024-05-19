@@ -28,6 +28,9 @@ const allhelp = {
     "value2": "This variable stores the second value entered by the user. "+
               "It is used subsequently in the calculation of <span class='cx-var'>total</span>.",
     "total": "This variable stores the total. "+
-           "It is calculated based on <span class='cx-var'>value1</span> and <span class='cx-var'>value2</span>, and subsequently displayed at the end of the program."
+           "It is calculated based on <span class='cx-var'>value1</span> and <span class='cx-var'>value2</span>, and subsequently displayed at the end of the program.",
+
+     "display:": "-",
+     "keyboard": "-"      
   };
   
