@@ -5,13 +5,17 @@
         <link rel="stylesheet" href="cxhelp.css">
         <link rel="stylesheet" href="cxhilite.css">
         <link rel="stylesheet" href="cxlayout.css">
+        <link rel="stylesheet" href="cxlinenums.css">
     </head>
     <body>
         <header><span id="title" class="cx-hilitable help-span"><b>Program 3-9</b>: Calculate ending balance of a 1-year CD (new vs. existing customers: nested if)</span></header>
         <div id="help-container"></div>
         <div id="copy-message">Code copied to clipboard</div>
 <div class="container">
-<section class="left"><pre><code id="code"><span class="cx-com"># Calculate the ending balance of a 1-year certificate of deposit</span>
+<section class="left">
+<div class="linenums-and-code">
+<div id="line-numbers-container"></div>        
+<pre><code id="code"><span class="cx-com"># Calculate the ending balance of a 1-year certificate of deposit</span>
 <span class="cx-com"># Consider new vs existing customers, and 2 rates for existing customers</span>
 
 <span class="cx-com"># Prompt for type of customer</span>
@@ -34,9 +38,11 @@
 
 <span class="cx-com"># Display the result</span>
 <span class="cx-sta cx-hilitable help-span" id="23"><span class="cx-fun">print</span>(<span class="cx-str">'Interest rate='</span>, <span class="cx-var">interestRate</span>, <span class="cx-str">'%'</span>)</span>
-<span class="cx-sta cx-hilitable help-span" id="24"><span class="cx-fun">print</span>(<span class="cx-str">'Ending balance= $'</span>, <span class="cx-var">endBalance</span>)</span>
-</code></pre>
-<button id="copy-button">Copy</button>
+<span class="cx-sta cx-hilitable help-span" id="24"><span class="cx-fun">print</span>(<span class="cx-str">'Ending balance= $'</span>, <span class="cx-var">endBalance</span>)</span></code></pre>
+</div>
+<br>
+<button id="toggle-line-numbers" class="cx-button" title="show/hide line numbers">Line #s</button>&nbsp;
+<button id="copy-button" title="copy code to clipboard">Copy</button>
 </section>
 <section class="right">
 <span class="cx-varheading">VARIABLES:</span><code><p>
@@ -47,7 +53,7 @@
 <tr><td></td><td>float</td><td><span id="endBalance" class="cx-var cx-hilitable help-span">endBalance</span></td></tr>
 </table></code>
 <br>
-<span class="cx-varheading">INPUT/OUTPUT:</span><p>
+<span class="cx-varheading">INPUT / OUTPUT:</span><p>
 <code><table>    
 <tr><td></td><td><image src="console-display.png"/></td><td><span id="display" class="cx-hilitable help-span">[display]</span></td></tr>
 <tr><td></td><td><image src="console-keyboard.png"/></td><td><span id="keyboard" class="cx-hilitable help-span">[keyboard]</span></td></tr>
@@ -59,7 +65,7 @@
             <span id="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span>
             <span id="copyright">(c) 2024 Rose River Software, LLC</span> &nbsp;&nbsp;
         <a href="cx-terms.html" target="_blank">Terms of Use</a> &nbsp;&nbsp;&nbsp;
-        <a href="cx-help.pdf" target="_blank"><button class="cx-button">Help</button></a>
+        <a href="cx-help.pdf" target="_blank"><button class="cx-button" title="display help for CodeXplorer">Help</button></a>
         </footer>
         <script src="cxcopy.js"></script>
         <script src="cxhelp.js" defer></script>
@@ -72,5 +78,9 @@
         <script src="cxarrowcb.js"></script>
         <script src="p4da-3-9-arrows.js"></script>
 
+        <script src="cxlinenums.js"></script>
+        <script>
+            const lineNumbers = new LineNumbers('line-numbers-container', 'code', false, 'toggle-line-numbers');
+        </script>        
     </body>
 </html>

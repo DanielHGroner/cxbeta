@@ -26,7 +26,7 @@ const allhelp = {
     "endBalance": "This variable stores the ending balance. "+
            "It is calculated based on the initial investment and interest rate, and is displayed at the end of the program.",
 
-    "display:": "-",
+    "display": "-", 
     "keyboard": "-"
   };
   

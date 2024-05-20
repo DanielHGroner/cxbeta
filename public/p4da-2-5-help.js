@@ -30,7 +30,7 @@ const allhelp = {
     "total": "This variable stores the total. "+
            "It is calculated based on <span class='cx-var'>value1</span> and <span class='cx-var'>value2</span>, and subsequently displayed at the end of the program.",
 
-     "display:": "-",
+     "display": "-", 
      "keyboard": "-"      
   };
   

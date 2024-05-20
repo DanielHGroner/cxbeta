@@ -10,8 +10,8 @@ const allhelp = {
          "by the <span class='cx-fun'>float()</span> function, before being assigned to the <span class='cx-var'>height</span> variable.",
     "5": "Initialize the variable <span class='cx-var'>anotherWeight</span> to 'y'. "+
          "This allows the while repetition to execute at least once.",
-    "7": "The while statements checks if the variable <span class='cx-var'>anotherWeight</span> is 'y'; "+
-         " if so, the indented statements will execute.",
+    "7": "The <span class='cx-key'>while</span> statement checks if the variable <span class='cx-var'>anotherWeight</span> is 'y'; "+
+         " if so, the indented statements will execute, after which flow returns back to the <span class='cx-key'>while</span> statement.",
     "9": "Get input for weight, convert to float, "+
          "and assign to variable <span class='cx-var'>weight</span>. "+
          "The <span class='cx-fun'>input()</span> function returns a string, which is converted to a number " +
@@ -35,7 +35,7 @@ const allhelp = {
     "anotherWeight": "This variable controls whether the while statement "+
        "repeats, in order to add another result of a weight and its corresponding BMI.",
 
-       "display:": "-",
+       "display": "-", 
        "keyboard": "-"   
 };
   
