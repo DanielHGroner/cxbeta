@@ -1,11 +1,12 @@
 class ArrowTurn {
-    constructor(x1, y1, x2, y2, colorv, colorh) {
+    constructor(x1, y1, x2, y2, colorv, colorh, text) {
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
         this.colorv = colorv;
         this.colorh = colorh;
+        this.text = text;
         this.visible = true;
     }
 
@@ -31,6 +32,19 @@ class ArrowTurn {
             this.arrowHead.setAttribute("points", arrowPoints);
             this.arrowHead.setAttribute("fill", this.colorh);
             svgElement.appendChild(this.arrowHead);
+
+            // create the text
+            if (this.text) {
+                this.textElem = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                this.textElem.setAttribute("x", this.x1+15);
+                this.textElem.setAttribute("y", this.y1+3);
+                this.textElem.setAttribute("font-size", 12);
+                this.textElem.textContent = this.text;
+                svgElement.appendChild(this.textElem);
+            }
+            else {
+                this.textElem = null;
+            }
         }
     }
 
@@ -52,17 +66,21 @@ class ArrowTurn {
             this.verticalLine.style.display = display;
             this.horizontalLine.style.display = display;
             this.arrowHead.style.display = display;
+            if (this.textElem) {
+                this.textElem.style.display = display;
+            }
         }
     }
 }
 
 class ArrowBetween {
-    constructor(elem1, elem2, x1, width, colorv, colorh) {
+    constructor(elem1, elem2, x1, width, colorv, colorh, text) {
         this.elem1 = elem1;
         this.elem2 = elem2;
         this.width = width;
         this.colorv = colorv;
         this.colorh = colorh;
+        this.text = text;
 
         const rect1 = elem1.getBoundingClientRect();
         const rect2 = elem2.getBoundingClientRect();
@@ -72,7 +90,7 @@ class ArrowBetween {
         const y2 = rect2.top + rect2.height / 2;
         const x2 = x1 + width;
 
-        this.arrowTurn = new ArrowTurn(x1, y1, x2, y2, colorv, colorh);
+        this.arrowTurn = new ArrowTurn(x1, y1, x2, y2, colorv, colorh, text);
     }
 
     draw(svgElement) {

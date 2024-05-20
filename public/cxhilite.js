@@ -33,17 +33,17 @@ cxStatements.forEach(span => {
     currentHighlightedSpan = this;
 
     // Hilite the mapped-to highlight 2s
-    console.log(this.id);
-    console.log(allhilite2[this.id]);
+    //console.log(this.id);
+    //console.log(allhilite2[this.id]);
     tohilite2 = allhilite2[this.id];
     if (tohilite2) {
       tohilite2.forEach(spanid => {
-        console.log(spanid);
+        //console.log(spanid);
         first = spanid.charAt(0);
         // TODO: is there a more general way to do this?
         if (first == '<' || first == '>' || first =='*') {
           spanid = spanid.slice(1);
-          console.log(first, spanid);
+          //console.log(first, spanid);
         }
         else {
           first = '';
@@ -76,8 +76,8 @@ let currentActionCells = [];
 // this is hard-coded to set the cell 2 to the left
 // TODO: is there a more general (convenient) way to support set/get action display?
 function displayAction(elem, c) { 
-  console.log('*** Entering displayAction');
-  console.log(elem, c);
+  //console.log('*** Entering displayAction');
+  //console.log(elem, c);
   elem0 = elem.parentElement; // move from variable span to it <td> parent
   elem1 = elem0.previousElementSibling; // move over to the left 2x
   elem2 = elem1.previousElementSibling;

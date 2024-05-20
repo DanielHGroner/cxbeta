@@ -25,16 +25,27 @@ document.addEventListener("DOMContentLoaded", function() {
       else
          helpContainer.style.display = "none";
 
+      // ** initial placement of the help
       const spanRect = span.getBoundingClientRect();
-      //const helpRect = helpContainer.getBoundingClientRect();
       
       // Calculate the position to place the help container next to the span
       let leftOffset = spanRect.right + window.scrollY;
       let topOffset = spanRect.bottom;
-      console.log(leftOffset, topOffset);
+      //console.log(leftOffset, topOffset);
 
       helpContainer.style.left = `${leftOffset}px`;
       helpContainer.style.top = `${topOffset}px`;
+
+      // ** refine placement of the help, if needed
+      // Get the bounding rectangle of the help box
+      const rect = helpContainer.getBoundingClientRect();
+      // Check if the box is off-screen and adjust position if necessary
+      const viewportWidth = window.innerWidth;
+      // Adjust if the box is off the right edge
+      if (rect.right > viewportWidth) {
+          helpContainer.style.left = `${viewportWidth - rect.width}px`;
+      }
+      
 
       // empty help
       if (text == '-' || text == '') {helpContainer.style.display = "none";}
