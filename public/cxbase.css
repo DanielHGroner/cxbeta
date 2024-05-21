@@ -46,4 +46,8 @@
     border: 1px solid #ccc;
     border-radius: 3px;
   }
+
+#toggle-line-numbers-text {
+    font-size: 80%;
+}
   

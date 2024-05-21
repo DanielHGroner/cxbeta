@@ -10,7 +10,9 @@ logo.addEventListener('click', function() {
 });
 
 var helpDisplaying = true;
-const copyright = document.getElementById('copyright');
-copyright.addEventListener('click', function() {
+const helpToggleButton = document.getElementById('help-toggle');
+helpToggleButton.addEventListener('click', function() {
   helpDisplaying = !helpDisplaying;
+  //if (helpDisplaying) helpToggleButton.innerHTML = "Help off";
+  //else helpToggleButton.innerHTML = "Help on";
 });
