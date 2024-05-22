@@ -1,7 +1,7 @@
 // p4da-3-6-help.js
 const allhelp = {
     "title": "This program calculates the ending balance for a certificate of deposit."+
-    "The interest rate is determined based on the the customer type and user-entered investment amount, "+
+    "The interest rate is determined based on the customer type and user-entered investment amount, "+
     "using if and else statements.  The ending balance is calculated based on "+
     "the investment amount and interest rate, and then displayed.",
     "5": "Get the customer type, to determine if this is a new or existing customer. "+

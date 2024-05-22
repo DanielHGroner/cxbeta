@@ -73,8 +73,11 @@ document.addEventListener("DOMContentLoaded", function() {
       isDragging = false;
     });
   
+    // superceeded by show/hide toggle feature
     // Hide help container when clicked outside
+    /*
     document.addEventListener("click", function(event) {
+      //console.log('clicked outside current statement')
       let clickedSpan = false;
       helpSpans.forEach(span => {
         if (span.contains(event.target)) {
@@ -85,6 +88,6 @@ document.addEventListener("DOMContentLoaded", function() {
       if (!helpContainer.contains(event.target) && !clickedSpan) {
         helpContainer.style.display = "none";
       }
-    });
+    });*/
   });
   
