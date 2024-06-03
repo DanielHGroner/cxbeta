@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cxbase.css">
+        <link rel="stylesheet" href="cxcopy.css">
+        <link rel="stylesheet" href="cxhelp.css">
+        <link rel="stylesheet" href="cxhilite.css">
+        <link rel="stylesheet" href="cxlayout.css">
+        <link rel="stylesheet" href="cxlinenums.css">
+    </head>
+    <body>
+        <header><span class="help-span cx-hilitable" id="title"><b>Program 4-3</b>: Using while repetition, find the maximum of a set of user-entered values</span></header>
+        <div id="help-container"></div>
+        <div id="copy-message">Code copied to clipboard</div>
+<div class="container">
+<section class="left">
+<div class="linenums-and-code">
+<div id="line-numbers-container"></div>
+<pre><code id="code"><span class="cx-com"># Find the maximum of a set of user-entered numbers</span>
+
+<span class="cx-com"># repetition to prompt for values and track largest</span>
+<span class="cx-statement cx-hilitable help-span" id="4"><span class="cx-var">value</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">'Enter an initial value: '</span>))</span> <span class="cx-com"># prompt for the first value</span>
+<span class="cx-statement cx-hilitable help-span" id="5"><span class="cx-var">largest</span> = <span class="cx-var">value</span></span>
+<span class="cx-statement cx-hilitable help-span" id="6"><span class="cx-key">while</span> <span class="cx-var">value</span> != <span class="cx-num">0</span>:</span>
+    <span class="cx-statement cx-hilitable help-span" id="7"><span class="cx-key">if</span> <span class="cx-var">value</span> > <span class="cx-var">largest</span>:</span> <span class="cx-com"># is latest entry larger than the largest so far?</span>
+        <span class="cx-statement cx-hilitable help-span" id="8"><span class="cx-var">largest</span> = <span class="cx-var">value</span></span> <span class="cx-com"># if so, track this as the new largest value</span>
+        <span class="cx-statement cx-hilitable help-span" id="9"><span class="cx-fun">print</span>(<span class="cx-str">'New largest value:'</span>, <span class="cx-var">largest</span>)</span>
+    <span class="cx-com"># prompt for subsequent values</span>
+    <span class="cx-statement cx-hilitable help-span" id="11"><span class="cx-var">value</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">'Enter another value (or 0 to end): '</span>))</span>
+
+<span class="cx-com"># Output result</span>
+<span class="cx-statement cx-hilitable help-span" id="14"><span class="cx-fun">print</span>(<span class="cx-str">'\nLargest value:'</span>, <span class="cx-var">largest</span>)</span></code></pre>
+</div>
+<br>
+<input type="checkbox" id="toggle-line-numbers" title="show/hide line numbers"><span id='toggle-line-numbers-text'>Line #s</span></input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<button id="copy-button" title="copy code to clipboard">Copy</button>
+</section>
+<section class="right">
+<span class="cx-varheading">VARIABLES:</span><p>
+<code><table>    
+<tr><td id="-value"></td><td>float</td><td><span id="value" class="cx-var cx-hilitable help-span">value</span></td></tr>
+<tr><td id="-largest"></td><td>float</td><td><span id="largest" class="cx-var cx-hilitable help-span">largest</span></td></tr>
+</table></code>
+<br>
+<span class="cx-varheading">INPUT / OUTPUT:</span><p>
+<code><table>    
+<tr><td></td><td><image src="console-display.png"/></td><td><span id="display" class="cx-hilitable help-span">[display]</span></td></tr>
+<tr><td></td><td><image src="console-keyboard.png"/></td><td><span id="keyboard" class="cx-hilitable help-span">[keyboard]</span></td></tr>
+</table></code>    
+</section>
+</div>
+<svg id="svgElem"></svg>
+        <footer id="footer">
+            <input type="checkbox" id="help-toggle" title="display help for CodeXplorer" checked>Show help</input>&nbsp;&nbsp;&nbsp;
+            <span id="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span>
+            <span id="copyright">(c) 2024 Rose River Software, LLC</span> &nbsp;&nbsp;&nbsp;
+            <a href="cx-terms.html" target="_blank" title="display Terms of Use for CodeXplorer">Terms of Use</a>&nbsp;&nbsp;&nbsp;
+            <a href="cx-help.pdf" target="_blank" title="display Overview for CodeXplorer">Overview</a>
+        </footer>
+        <script src="cxcopy.js"></script>
+        <script src="cxhelp.js" defer></script>
+        <script src="cxhilite.js"></script>
+        <script src="cxhide.js"></script>
+        <script src="p4da-4-3-help.js" defer></script>
+        <script src="p4da-4-3-hilite.js"></script>
+
+        <script src="cxarrows.js"></script>
+        <script src="cxarrowcb.js"></script>
+        <script src="p4da-4-3-arrows.js"></script>
+
+        <script src="cxlinenums.js"></script>
+        <script>
+            const lineNumbers = new LineNumbers('line-numbers-container', 'code', false, 'toggle-line-numbers');
+        </script>        
+    </body>
+</html>
