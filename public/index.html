@@ -5,32 +5,64 @@
             .logo {
                 font-size:20px;
             }
+            .chapter {
+                font-size:16px;
+                font-weight:bold;
+            }
+            header {
+               position: fixed;
+               top: 0;
+               left: 0;
+               right: 0;
+               height: 40px; /* Set the height of the header */
+               background-color: whitesmoke;
+               padding: 10px;
+               text-align: center;
+               line-height: 15px; /* Center text vertically */
+               box-sizing: border-box; /* Ensure padding is included in height calculation */
+            }
+        .content {
+            padding-top: 50px; /* Match this to the total height of the header (including padding) */
+            padding: 10px;
+        }
         </style>
     </head>
     <body>
+        <header>
         <span class="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span><sup style="font-size:50%">TM</sup>
+        </header>
         <br><br>
+        <div class="content">
         <div style="line-height:2">
-           <div>Chapter 2: Variables and Statements</div>
+           <div class="chapter">Chapter 2: Variables and Statements</div>
               &nbsp;<a href="p4da-2-5.html" target="_blank">Program 2-5: Calculate the total of two numbers</a><br>
               &nbsp;<a href="p4da-2-6.html" target="_blank">Program 2-6: Calculate BMI from height and weight</a><br>
-           <div>Chapter 3: Decisions</div>
+           <div class="chapter">Chapter 3: Decisions</div>
               &nbsp;<a href="p4da-3-6.html" target="_blank">Program 3-6: Calculate ending balance of a 1-year CD (2 rates, if/else)</a><br>
               &nbsp;<a href="p4da-3-8.html" target="_blank">Program 3-8: Calculate ending balance of a 1-year CD (3 rates, if/elif/else)</a><br>
               &nbsp;<a href="p4da-3-9.html" target="_blank">Program 3-9: Calculate ending balance of a 1-year CD (new vs. existing customers; nested if)</a><br>
-           <div>Chapter 4: Repetition</div>
+           <div class="chapter">Chapter 4: Repetition</div>
               &nbsp;<a href="p4da-4-1.html" target="_blank">Program 4-1: With while, generate a table of squares and cubes</a><br>
               &nbsp;<a href="p4da-4-2.html" target="_blank">Program 4-2: With while, cumulate a set of user-entered numbers</a><br>
               &nbsp;<a href="p4da-4-3.html" target="_blank">Program 4-3: With while, find the maximum of a set of user-entered numbers</a><br>
               &nbsp;<a href="p4da-4-4.html" target="_blank">Program 4-4: With while, generate BMIs for different weights</a><br>
               &nbsp;<a href="p4da-4-8.html" target="_blank">Program 4-8: With for, generate a table of squares and cubes</a><br>
-           <div>Chapter 5: Defining Functions</div>
+           <div class="chapter">Chapter 5: Defining Functions</div>
+              &nbsp;<a href="p4da-5-1.html" target="_blank">Program 5-1: Define and call a function to display a greeting</a><br>
               &nbsp;<a href="p4da-5-2.html" target="_blank">Program 5-2: Define and call a function with one input and one output</a><br>
-        </div>
-        <footer id="footer">(c) 2024 Rose River Software, LLC &nbsp;&nbsp;&nbsp;
+              &nbsp;<a href="p4da-5-3.html" target="_blank">Program 5-3: Define and call a function with two inputs and one output</a><br>
+           <div class="chapter">Chapter 7: Reading & Writing Files</div>
+              &nbsp;<a href="p4da-7-1.html" target="_blank">Program 7-1: Read one line from a file and display it to the screen</a><br>
+              &nbsp;<a href="p4da-7-2.html" target="_blank">Program 7-2: With while, read a file and echo its lines to the screen</a><br>
+              &nbsp;<a href="p4da-7-3.html" target="_blank">Program 7-3: With for, read a file and echo its lines to the screen</a><br>
+              &nbsp;<a href="p4da-7-7.html" target="_blank">Program 7-7: Prompt for input and write a single line to a file</a><br>
+
+            </div>
+        <br>
+            <!--footer id="footer"-->(c) 2024 Rose River Software, LLC &nbsp;&nbsp;&nbsp;
             <a href="cx-terms.html" target="_blank">Terms of Use</a> &nbsp;&nbsp;&nbsp;
             <a href="cx-help.pdf" target="_blank">Overview</button></a>
-        </footer>
-    
+            <!--/footer-->
+    </div>
     </body>
 </html>
