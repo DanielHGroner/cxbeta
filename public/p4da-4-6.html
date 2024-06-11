@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cxbase.css">
+        <link rel="stylesheet" href="cxcopy.css">
+        <link rel="stylesheet" href="cxhelp.css">
+        <link rel="stylesheet" href="cxhilite.css">
+        <link rel="stylesheet" href="cxlayout.css">
+        <link rel="stylesheet" href="cxlinenums.css">
+    </head>
+    <body>
+        <header><span id="title" class="cx-hilitable help-span"><b>Program 4-6</b>: With while, generate BMIs for different weights (special end value)</span></header>
+        <div id="help-container"></div>
+        <div id="copy-message">Code copied to clipboard</div>
+<div class="container">
+<section class="left">
+<div class="linenums-and-code">
+<div id="line-numbers-container"></div>        
+<pre><code id="code"><span class="cx-com"># Using while repetition and special end value,</span>
+<span class="cx-com"># calculate BMIs for a height and different weights</span>
+
+<span class="cx-com"># get input height (common for all calculations)</span>
+<span class="cx-statement cx-hilitable help-span" id="5"><span class="cx-var">height</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">'Enter height (inches): '</span>))</span>
+
+<span class="cx-com"># get initial weight to calculate with</span>
+<span class="cx-statement cx-hilitable help-span" id="8"><span class="cx-var">weight</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">'Enter weight (pounds): '</span>))</span>
+
+<span class="cx-statement cx-hilitable help-span" id="11"><span class="cx-key">while</span> <span class="cx-var">weight</span> != <span class="cx-num">0</span></span>:
+    <span class="cx-statement cx-hilitable help-span" id="12"><span class="cx-var">bmi</span> = <span class="cx-var">weight</span> / <span class="cx-var">height</span>**<span class="cx-num">2</span> * <span class="cx-num">703</span></span>
+    <span class="cx-statement cx-hilitable help-span" id="13"><span class="cx-fun">print</span>(<span class="cx-str">'BMI = '</span>, <span class="cx-fun">round</span>(<span class="cx-var">bmi</span>, <span class="cx-num">1</span>))</span>
+    
+    <span class="cx-statement cx-hilitable help-span" id="15"><span class="cx-var">weight</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">'\nEnter weight goal (or 0 to end): '</span>))</span>
+<span id="16" class cx-hilitable></span></code></pre>
+</div>
+<br>
+<input type="checkbox" id="toggle-line-numbers" title="show/hide line numbers"><span id='toggle-line-numbers-text'>Line #s</span></input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<button id="copy-button" title="copy code to clipboard">Copy</button>
+</section>
+<section class="right">
+<span class="cx-varheading">VARIABLES:</span><code><p>
+<table>    
+<tr><td></td><td>float</td><td><span id="height" class="cx-var cx-hilitable help-span">height</span></td></tr>
+<tr><td></td><td>float</td><td><span id="weight" class="cx-var cx-hilitable help-span">weight</span></td></tr>
+<tr><td></td><td>float</td><td><span id="bmi" class="cx-var cx-hilitable help-span">bmi</span></td></tr>
+</table></code>
+<br>
+<span class="cx-varheading">INPUT / OUTPUT:</span><p>
+<code><table>    
+<tr><td></td><td><image src="console-display.png"/></td><td><span id="display" class="cx-hilitable help-span">[display]</span></td></tr>
+<tr><td></td><td><image src="console-keyboard.png"/></td><td><span id="keyboard" class="cx-hilitable help-span">[keyboard]</span></td></tr>
+</table></code>    
+</section>
+</div>
+<svg id="svgElem"></svg>
+        <footer id="footer">
+            <input type="checkbox" id="help-toggle" title="display help for CodeXplorer" checked>Show help</input>&nbsp;&nbsp;&nbsp;
+            <span id="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span>
+            <span id="copyright">(c) 2024 Rose River Software, LLC</span> &nbsp;&nbsp;&nbsp;
+            <a href="cx-terms.html" target="_blank" title="display Terms of Use for CodeXplorer">Terms of Use</a>&nbsp;&nbsp;&nbsp;
+            <a href="cx-help.pdf" target="_blank" title="display Overview for CodeXplorer">Overview</a>
+        </footer>
+        <script src="cxcopy.js"></script>
+        <script src="cxhelp.js" defer></script>
+        <script src="cxhilite.js"></script>
+        <script src="cxhide.js"></script>
+        <script src="p4da-4-6-help.js"></script>
+        <script src="p4da-4-6-hilite.js"></script>
+
+        <script src="cxarrows.js"></script>
+        <script src="cxarrowcb.js"></script>
+        <script src="p4da-4-6-arrows.js"></script>
+
+        <script src="cxlinenums.js"></script>
+        <script>
+            const lineNumbers = new LineNumbers('line-numbers-container', 'code', false, 'toggle-line-numbers');
+        </script>
+    </body>
+</html>
