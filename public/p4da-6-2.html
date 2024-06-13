@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cxbase.css">
+        <link rel="stylesheet" href="cxcopy.css">
+        <link rel="stylesheet" href="cxhelp.css">
+        <link rel="stylesheet" href="cxhilite.css">
+        <link rel="stylesheet" href="cxlayout.css">
+        <link rel="stylesheet" href="cxlinenums.css">
+    </head>
+    <body>
+        <header><span id="title" class="cx-hilitable help-span"><b>Program 6-2</b>: Build a list with user-entered values, and calculate its average</span></header>
+        <div id="help-container"></div>
+        <div id="copy-message">Code copied to clipboard</div>
+        <div class="container">
+<section class="left">
+<div class="linenums-and-code">
+<div id="line-numbers-container"></div>    
+<pre><code id="code"><span class="cx-com"># show how to create an empty list and add elements to it</span>
+
+<span class="cx-com"># prompt for a series of values and build and return a list</span>
+<span class="cx-statement cx-hilitable help-span" id="4"><span class="cx-key">def</span> <span class="cx-fun">getValues</span>():</span>
+    <span class="cx-statement cx-hilitable help-span" id="5"><span class="cx-var">result</span> = []</span> <span class="cx-com"># define an empty list</span>
+    <span class="cx-statement cx-hilitable help-span" id="6"><span class="cx-var">entry</span> = <span class="cx-fun">input</span>(<span class="cx-str">'Enter a value, or <return> when done: '</span>)</span>
+    <span class="cx-statement cx-hilitable help-span" id="7"><span class="cx-key">while</span> <span class="cx-var">entry</span> != <span class="cx-str">''</span>:</span>
+        <span class="cx-statement cx-hilitable help-span" id="8"><span class="cx-var">result</span>.<span class="cx-fun">append</span>(<span class="cx-fun">float</span>(<span class="cx-var">entry</span>))</span> <span class="cx-com"># add a value to end of list</span>
+        <span class="cx-statement cx-hilitable help-span" id="9"><span class="cx-var">entry</span> = <span class="cx-fun">input</span>(<span class="cx-str">'Enter a value, or <return> when done: '</span>)</span>
+    <span class="cx-statement cx-hilitable help-span" id="10"><span class="cx-key">return</span> <span class="cx-var">result</span></span>
+
+<span class="cx-com"># calculate the mean of a list</span>
+<span class="cx-statement cx-hilitable help-span" id="13"><span class="cx-key">def</span> <span class="cx-fun">calcMean</span>(<span class="cx-var">alist</span>):</span>
+    <span class="cx-statement cx-hilitable help-span" id="14"><span class="cx-var">n</span> = <span class="cx-fun">len</span>(<span class="cx-var">alist</span>)</span> <span class="cx-com"># determine the number of elements in the list</span>
+    <span class="cx-statement cx-hilitable help-span" id="15"><span class="cx-key">if</span> <span class="cx-var">n</span> == <span class="cx-num">0</span>:</span> <span class="cx-statement cx-hilitable help-span" id="15.1"><span class="cx-key">return</span> <span class="cx-key">None</span></span> <span class="cx-com"># handle an empty list</span>
+    <span class="cx-statement cx-hilitable help-span" id="16"><span class="cx-var">sum</span> = <span class="cx-num">0</span></span> <span class="cx-com"># sum will cumulate the list's values</span>
+    <span class="cx-statement cx-hilitable help-span" id="17"><span class="cx-key">for</span> <span class="cx-var">i</span> <span class="cx-key">in</span> <span class="cx-fun">range</span>(<span class="cx-var">n</span>):</span>
+        <span class="cx-statement cx-hilitable help-span" id="18"><span class="cx-var">sum</span> += <span class="cx-var">alist</span>[<span class="cx-var">i</span>]</span>
+    <span class="cx-statement cx-hilitable help-span" id="19"><span class="cx-key">return</span> <span class="cx-var">sum</span> / <span class="cx-var">n</span></span> <span class="cx-com"># calculate and return the average</span>
+
+<span class="cx-statement cx-hilitable help-span" id="21"><span class="cx-var">measures</span> = <span class="cx-fun">getValues</span>()</span>
+<span class="cx-statement cx-hilitable help-span" id="22"><span class="cx-var">mean</span> = <span class="cx-fun">calcMean</span>(<span class="cx-var">measures</span>)</span>
+<span class="cx-statement cx-hilitable help-span" id="23"><span class="cx-fun">print</span>(<span class="cx-str">'Mean='</span>, <span class="cx-var">mean</span>)</span></code></pre>
+</div>
+<br>
+<input type="checkbox" id="toggle-line-numbers" title="show/hide line numbers"><span id='toggle-line-numbers-text'>Line #s</span></input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<button id="copy-button" title="copy code to clipboard">Copy</button>
+</section>
+<section class="right">
+<span class="cx-varheading">VARIABLES:<p></span><code>    
+&nbsp;<u>getValues()</u>:
+<table>
+<tr><td></td><td>list[float]</td><td><span id="getValues.result" class="cx-var cx-hilitable help-span">result</span></td></tr>
+<tr><td></td><td>str</td><td><span id="getValues.entry" class="cx-var cx-hilitable help-span">entry</span></td></tr>
+</table><p>
+&nbsp;<u>calcMean()</u>:
+<table>
+<tr><td></td><td>list[float]</td><td><span id="calcMean.alist" class="cx-var cx-hilitable help-span">alist</span></td></tr>
+<tr><td></td><td>int</td><td><span id="calcMean.n" class="cx-var cx-hilitable help-span">n</span></td></tr>
+<tr><td></td><td>int|float</td><td><span id="calcMean.sum" class="cx-var cx-hilitable help-span">sum</span></td></tr>
+<tr><td></td><td>int</td><td><span id="calcMean.i" class="cx-var cx-hilitable help-span">i</span></td></tr>
+</table><p>
+&nbsp;<u>global</u>:
+<table>
+<tr><td></td><td>list[float]</td><td><span id="measures" class="cx-var cx-hilitable help-span">measures</span></td></tr>
+<tr><td></td><td>float</td><td><span id="mean" class="cx-var cx-hilitable help-span">mean</span></td></tr>
+</table></code>
+<br>
+<span class="cx-varheading">INPUT / OUTPUT:</span><p>
+<code><table>    
+<tr><td></td><td><image src="console-display.png"/></td><td><span id="display" class="cx-hilitable help-span">[display]</span></td></tr>
+<tr><td></td><td><image src="console-keyboard.png"/></td><td><span id="keyboard" class="cx-hilitable help-span">[keyboard]</span></td></tr>
+</table></code>    
+</section>
+</div>
+<svg id="svgElem"></svg>
+        <footer id="footer">
+            <input type="checkbox" id="help-toggle" title="display help for CodeXplorer" checked>Show help</input>&nbsp;&nbsp;&nbsp;
+            <span id="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span>
+            <span id="copyright">(c) 2024 Rose River Software, LLC</span> &nbsp;&nbsp;&nbsp;
+            <a href="cx-terms.html" target="_blank" title="display Terms of Use for CodeXplorer">Terms of Use</a>&nbsp;&nbsp;&nbsp;
+            <a href="cx-help.pdf" target="_blank" title="display Overview for CodeXplorer">Overview</a>
+        </footer>
+        <script src="cxcopy.js"></script>
+        <script src="cxhelp.js" defer></script>
+        <script src="cxhilite.js"></script>
+        <script src="cxhide.js"></script>
+        <script src="p4da-6-2-help.js"></script>
+        <script src="p4da-6-2-hilite.js"></script>
+
+        <script src="cxarrows.js"></script>
+        <script src="cxarrowcb.js"></script>
+        <script src="p4da-6-2-arrows.js"></script>
+
+        <script src="cxlinenums.js"></script>
+        <script>
+            const lineNumbers = new LineNumbers('line-numbers-container', 'code', false, 'toggle-line-numbers');
+        </script>        
+    </body>
+</html>

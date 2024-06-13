@@ -50,4 +50,8 @@
 #toggle-line-numbers-text {
     font-size: 80%;
 }
-  
+
+/* TODO - could define with a class, but requires change to all examples */
+td {
+    min-width: 3ch; /* support <-> in var table */
+}

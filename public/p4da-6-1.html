@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cxbase.css">
+        <link rel="stylesheet" href="cxcopy.css">
+        <link rel="stylesheet" href="cxhelp.css">
+        <link rel="stylesheet" href="cxhilite.css">
+        <link rel="stylesheet" href="cxlayout.css">
+        <link rel="stylesheet" href="cxlinenums.css">
+    </head>
+    <body>
+        <header><span class="help-span cx-hilitable" id="title"><b>Program 6-1</b>: With lists, translate Air Quality Index (AQI) from number to color and concern</span></header>
+        <div id="help-container"></div>
+        <div id="copy-message">Code copied to clipboard</div>
+<div class="container">
+<section class="left">
+<div class="linenums-and-code">
+<div id="line-numbers-container"></div>
+<pre><code id="code"><span class="cx-com"># Translate Air Quality Index (AQI) from number to color and concern</span>
+<span class="cx-com"># https://www.airnow.gov/aqi/aqi-basics/</span>
+
+<span class="cx-com"># lists of levels and corresponding colors and concerns</span>
+<span class="cx-statement cx-hilitable help-span" id="5"><span class="cx-var">levels</span> = [<span class="cx-num">301</span>, <span class="cx-num">201</span>, <span class="cx-num">151</span>, <span class="cx-num">101</span>, <span class="cx-num">51</span>, <span class="cx-num">0</span>]</span>
+<span class="cx-statement cx-hilitable help-span" id="6"><span class="cx-var">colors</span> = [<span class="cx-str">'Maroon'</span>, <span class="cx-str">'Purple'</span>, <span class="cx-str">'Red'</span>, <span class="cx-str">'Orange'</span>, <span class="cx-str">'Yellow'</span>, <span class="cx-str">'Green'</span>]</span>
+<span class="cx-statement cx-hilitable help-span" id="7"><span class="cx-var">concerns</span> = [<span class="cx-str">'Hazardous'</span>, <span class="cx-str">'Very Unhealthy'</span>, <span class="cx-str">'Unhealthy'</span>,
+            <span class="cx-str">'Unhealthy for Sensitive Groups'</span>, <span class="cx-str">'Moderate'</span>, <span class="cx-str">'Good']</span></span>
+
+<span class="cx-com"># input</span>
+<span class="cx-statement cx-hilitable help-span" id="11"><span class="cx-var">level</span> = <span class="cx-fun">int</span>(<span class="cx-fun">input</span>(<span class="cx-str">'Enter an AQI level (integer): '</span>))</span>
+
+<span class="cx-com"># processing</span>
+<span class="cx-statement cx-hilitable help-span" id="14"><span class="cx-key">for</span> <span class="cx-var">i</span> <span class="cx-key">in</span> <span class="cx-fun">range</span>(<span class="cx-fun">len</span>(<span class="cx-var">levels</span>)):</span>
+    <span class="cx-statement cx-hilitable help-span" id="15"><span class="cx-key">if</span> <span class="cx-var">level</span> >= <span class="cx-var">levels</span>[<span class="cx-var">i</span>]:</span>
+        <span class="cx-statement cx-hilitable help-span" id="16"><span class="cx-var">color</span> = <span class="cx-var">colors</span>[<span class="cx-var">i</span>]</span>
+        <span class="cx-statement cx-hilitable help-span" id="17"><span class="cx-var">concern</span> = <span class="cx-var">concerns</span>[<span class="cx-var">i</span>]</span>
+        <span class="cx-statement cx-hilitable help-span" id="18"><span class="cx-key">break</span></span>
+
+<span class="cx-com"># output</span>
+<span class="cx-statement cx-hilitable help-span" id="21"><span class="cx-fun">print</span>(<span class="cx-str">'AQI color:'</span>, <span class="cx-var">color</span>)</span>
+<span class="cx-statement cx-hilitable help-span" id="22"><span class="cx-fun">print</span>(<span class="cx-str">'AQI concern level:'</span>, <span class="cx-var">concern</span>)</span></code></pre>
+</div>
+<br>
+<input type="checkbox" id="toggle-line-numbers" title="show/hide line numbers"><span id='toggle-line-numbers-text'>Line #s</span></input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<button id="copy-button" title="copy code to clipboard">Copy</button>
+</section>
+<section class="right">
+<span class="cx-varheading">VARIABLES:</span><p>
+<code><table>    
+<tr><td id="-levels"></td><td>list[int]</td><td><span id="levels" class="cx-var cx-hilitable help-span">levels</span></td></tr>
+<tr><td id="-colors"></td><td>list[str]</td><td><span id="colors" class="cx-var cx-hilitable help-span">colors</span></td></tr>
+<tr><td id="-concerns"></td><td>list[str]</td><td><span id="concerns" class="cx-var cx-hilitable help-span">concerns</span></td></tr>
+<tr><td id="-level"></td><td>int</td><td><span id="level" class="cx-var cx-hilitable help-span">level</span></td></tr>
+<tr><td id="-color"></td><td>str</td><td><span id="color" class="cx-var cx-hilitable help-span">color</span></td></tr>
+<tr><td id="-concern"></td><td>str</td><td><span id="concern" class="cx-var cx-hilitable help-span">concern</span></td></tr>
+<tr><td id="-i"></td><td>int</td><td><span id="i" class="cx-var cx-hilitable help-span">i</span></td></tr>
+</table></code>
+<br>
+<span class="cx-varheading">INPUT / OUTPUT:</span><p>
+<code><table>    
+<tr><td></td><td><image src="console-display.png"/></td><td><span id="display" class="cx-hilitable help-span">[display]</span></td></tr>
+<tr><td></td><td><image src="console-keyboard.png"/></td><td><span id="keyboard" class="cx-hilitable help-span">[keyboard]</span></td></tr>
+</table></code>    
+</section>
+</div>
+<svg id="svgElem"></svg>
+        <footer id="footer">
+            <input type="checkbox" id="help-toggle" title="display help for CodeXplorer" checked>Show help</input>&nbsp;&nbsp;&nbsp;
+            <span id="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span>
+            <span id="copyright">(c) 2024 Rose River Software, LLC</span> &nbsp;&nbsp;&nbsp;
+            <a href="cx-terms.html" target="_blank" title="display Terms of Use for CodeXplorer">Terms of Use</a>&nbsp;&nbsp;&nbsp;
+            <a href="cx-help.pdf" target="_blank" title="display Overview for CodeXplorer">Overview</a>
+        </footer>
+        <script src="cxcopy.js"></script>
+        <script src="cxhelp.js" defer></script>
+        <script src="cxhilite.js"></script>
+        <script src="cxhide.js"></script>
+        <script src="p4da-6-1-help.js" defer></script>
+        <script src="p4da-6-1-hilite.js"></script>
+
+        <script src="cxarrows.js"></script>
+        <script src="cxarrowcb.js"></script>
+        <script src="p4da-6-1-arrows.js"></script>
+
+        <script src="cxlinenums.js"></script>
+        <script>
+            const lineNumbers = new LineNumbers('line-numbers-container', 'code', false, 'toggle-line-numbers');
+        </script>        
+    </body>
+</html>
