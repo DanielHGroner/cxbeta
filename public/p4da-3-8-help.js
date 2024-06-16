@@ -2,7 +2,7 @@
 const allhelp = {
     "title": "This program calculates the ending balance for a certificate of deposit."+
     "The interest rate is determined based on the user-entered investment amount, "+
-    "using if, elif and else statements.  The ending balance is calculated based on "+
+    "using <span class='cx-key'>if</span>, <span class='cx-key'>elif</span> and <span class='cx-key'>else</span> statements.  The ending balance is calculated based on "+
     "the investment amount and interest rate, and then displayed.",
     "4": "Get input for initial investment amount, convert to float, "+
          "and assign to variable <span class='cx-var'>invest</span>. "+ 

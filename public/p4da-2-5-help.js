@@ -1,10 +1,10 @@
 // p4da-2-5-help.js
 const allhelp = {
     "title":"This program calculates the total of two numbers. "+
-            "value1 and value2 are prompted for and entered by the user, "+
+            "<span class='cx-var'>value1</span> and <span class='cx-var'>value2</span> are prompted for and entered by the user, "+
             "then the total is calculated and displayed. " +
             "The program also shows how to convert user input to a numeric value "+
-            "using a combination of the input() and float() functions. " +
+            "using a combination of the <span class='cx-fun'>input()</span> and <span class='cx-fun'>float()</span> functions. " +
             "Another function shown is print(), for displaying output to the screen.",
     "4": "Prompt and get input for a value, convert to float, "+
          "and assign to variable <span class='cx-var'>value1</span>. "+

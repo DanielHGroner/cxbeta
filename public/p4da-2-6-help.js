@@ -2,7 +2,7 @@
 const allhelp = {
     "title":"This program calculates body mass index (BMI) based on <span class='cx-var'>height</span> and <span class='cx-var'>weight</span>. "+
             "Height and weight are prompted for and entered by the user, "+
-            "then bmi is calculated and displayed. " +
+            "then BMI is calculated and displayed. " +
             "The program also shows how to convert user input to a numeric value "+
             "using a combination of the <span class='cx-fun'>input()</span> and <span class='cx-fun'>float()</span> functions. " +
             "Another function shown is <span class='cx-fun'>print()</span>, for displaying output to the screen.",
@@ -24,7 +24,7 @@ const allhelp = {
               "It is entered by the user and used subsequently in the calculation of BMI.",
     "weight": "This variable stores weight (in pounds). "+
               "It is entered by the user and used subsequently in the calculation of BMI.",
-    "bmi": "This variable stores bmi. "+
+    "bmi": "This variable stores BMI. "+
            "It is calculated based on <span class='cx-var'>height</span> and <span class='cx-var'>weight</span>, and subsequently displayed at the end of the program.",
 
      "display": "-",

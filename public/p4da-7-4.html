@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cxbase.css">
+        <link rel="stylesheet" href="cxcopy.css">
+        <link rel="stylesheet" href="cxhelp.css">
+        <link rel="stylesheet" href="cxhilite.css">
+        <link rel="stylesheet" href="cxlayout.css">
+        <link rel="stylesheet" href="cxlinenums.css">
+    </head>
+    <body>
+        <header><span class="help-span cx-hilitable" id="title"><b>Program 7-4</b>: With for, read a file of numbers and calculate and display their average</span></header>
+        <div id="help-container"></div>
+        <div id="copy-message">Code copied to clipboard</div>
+<div class="container">
+<section class="left">
+<div class="linenums-and-code">
+<div id="line-numbers-container"></div>
+<pre><code id="code"><span class="cx-com"># with for, read a file of numbers</span>
+<span class="cx-com"># and calculate and display their average</span>
+
+<span class="cx-statement cx-hilitable help-span" id="4"><span class="cx-var">total</span> = <span class="cx-num">0</span></span> <span class="cx-com"># the total of all values read</span>
+<span class="cx-statement cx-hilitable help-span" id="5"><span class="cx-var">i</span> = <span class="cx-num">0</span></span> <span class="cx-com"># the number of values read</span>
+
+<span class="cx-statement cx-hilitable help-span" id="7"><span class="cx-var">f</span> = <span class="cx-fun">open</span>(<span class="cx-str">'measures.txt'</span>)</span>
+<span class="cx-statement cx-hilitable help-span" id="8"><span class="cx-key">for</span> <span class="cx-var">line</span> <span class="cx-key">in</span> <span class="cx-var">f</span>:</span>
+    <span class="cx-statement cx-hilitable help-span" id="9"><span class="cx-var">line</span> = <span class="cx-var">line</span>.<span class="cx-fun">rstrip</span>(<span class="cx-str">'\n'</span>).<span class="cx-fun">strip</span>()</span>
+    <span class="cx-statement cx-hilitable help-span" id="10"><span class="cx-key">if</span> <span class="cx-var">line</span> != <span class="cx-str">''</span>:</span> <span class="cx-com"># ignore blank lines</span>
+        <span class="cx-statement cx-hilitable help-span" id="11"><span class="cx-var">value</span> = <span class="cx-fun">float</span>(<span class="cx-var">line</span>)</span> <span class="cx-com"># convert the variable line from str to float</span>
+        <span class="cx-statement cx-hilitable help-span" id="12"><span class="cx-fun">print</span>(<span class="cx-str">'value '</span>, <span class="cx-var">i</span>+<span class="cx-num">1</span>, <span class="cx-str">': '</span>, <span class="cx-var">line</span>, <span class="cx-var">sep</span>=<span class="cx-str">''</span>)</span>
+        <span class="cx-statement cx-hilitable help-span" id="13"><span class="cx-var">total</span> += <span class="cx-var">value</span></span>
+        <span class="cx-statement cx-hilitable help-span" id="14"><span class="cx-var">i</span> += <span class="cx-num">1</span></span>
+
+<span class="cx-statement cx-hilitable help-span" id="16"><span class="cx-var">f</span>.<span class="cx-fun">close</span>()</span>
+<span class="cx-statement cx-hilitable help-span" id="17"><span class="cx-var">average</span> = <span class="cx-var">total</span> / <span class="cx-var">i</span></span>
+<span class="cx-statement cx-hilitable help-span" id="18"><span class="cx-fun">print</span>(<span class="cx-str">"average ="</span>, <span class="cx-fun">round</span>(<span class="cx-var">average</span>, <span class="cx-num">2</span>))</span></code></pre>
+</div>
+<br>
+<input type="checkbox" id="toggle-line-numbers" title="show/hide line numbers"><span id='toggle-line-numbers-text'>Line #s</span></input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<button id="copy-button" title="copy code to clipboard">Copy</button>
+</section>
+<section class="right">
+<span class="cx-varheading">VARIABLES:</span><p>
+<code><table>    
+<tr><td id="-total"></td><td>int|float</td><td><span id="total" class="cx-var cx-hilitable help-span">total</span></td></tr>
+<tr><td id="-i"></td><td>int</td><td><span id="i" class="cx-var cx-hilitable help-span">i</span></td></tr>
+<tr><td id="-f"></td><td>TextIOWrapper</td><td><span id="f" class="cx-var cx-hilitable help-span">f</span></td></tr>
+<tr><td id="-line"></td><td>str</td><td><span id="line" class="cx-var cx-hilitable help-span">line</span></td></tr>
+<tr><td id="-value"></td><td>float</td><td><span id="value" class="cx-var cx-hilitable help-span">value</span></td></tr>
+<tr><td id="-average"></td><td>float</td><td><span id="average" class="cx-var cx-hilitable help-span">average</span></td></tr>
+</table></code>
+<br>
+<span class="cx-varheading">INPUT / OUTPUT:</span><p>
+<code><table>    
+<tr><td></td><td><image src="console-display.png"/></td><td><span id="display" class="cx-hilitable help-span">[display]</span></td></tr>
+<tr><td></td><td><image src="console-keyboard.png"/></td><td><span id="keyboard" class="cx-hilitable help-span">[keyboard]</span></td></tr>
+<tr><td></td><td><image src="file-icon.png"/></td><td><span id="file" class="cx-hilitable help-span">[file:measures.txt]</span></td></tr>
+</table></code>    
+</section>
+</div>
+<svg id="svgElem"></svg>
+        <footer id="footer">
+            <input type="checkbox" id="help-toggle" title="display help for CodeXplorer" checked>Show help</input>&nbsp;&nbsp;&nbsp;
+            <span id="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span>
+            <span id="copyright">(c) 2024 Rose River Software, LLC</span> &nbsp;&nbsp;&nbsp;
+            <a href="cx-terms.html" target="_blank" title="display Terms of Use for CodeXplorer">Terms of Use</a>&nbsp;&nbsp;&nbsp;
+            <a href="cx-help.pdf" target="_blank" title="display Overview for CodeXplorer">Overview</a>
+        </footer>
+        <script src="cxcopy.js"></script>
+        <script src="cxhelp.js" defer></script>
+        <script src="cxhilite.js"></script>
+        <script src="cxhide.js"></script>
+        <script src="p4da-7-4-help.js" defer></script>
+        <script src="p4da-7-4-hilite.js"></script>
+
+        <script src="cxarrows.js"></script>
+        <script src="cxarrowcb.js"></script>
+        <script src="p4da-7-4-arrows.js"></script>
+
+        <script src="cxlinenums.js"></script>
+        <script>
+            const lineNumbers = new LineNumbers('line-numbers-container', 'code', false, 'toggle-line-numbers');
+        </script>        
+    </body>
+</html>

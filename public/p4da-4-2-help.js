@@ -1,11 +1,11 @@
 const allhelp = {
-    "title":"This program cumulates a set of user-entered numbers, using the while statement. "+
-            "The user is prompted for values repetitvely, until they enter 0. "+
+    "title":"This program cumulates a set of user-entered numbers, using the <span class='cx-key'>while</span> statement. "+
+            "The user is prompted for values repetitively, until they enter 0. "+
             "The <span class='cx-var'>total</span> variable keeps track of the running total.",
     "4": "Set the <span class='cx-var'>count</span> variable to 0.  Count will keep track of how many numbers the user has entered.",
     "5": "Set the <span class='cx-var'>total</span> variable to 0. Total will keep a running total of the numbers the user has entered.",
     "8": "Prompt for and receive the first user-entered value; then convert this to a float number and store the number in the variable <span class='cx-var'>value</span>.",
-    "9": "The while statement controls if the repetition will continue, by checking if the user-entered value is not 0.",
+    "9": "The <span class='cx-key'>while</span> statement controls if the repetition will continue, by checking if the user-entered value is not 0.",
     "10": "Add to the running total.",
     "11": "Keep track of the number of user-entered values by incrementing the variable <span class='cx-var'>count</span>.",
     "12": "Prompt for and receive subsequent user-entered values, convert to a float number, and store the number in the variable <span class='cx-var'>value</span>.",

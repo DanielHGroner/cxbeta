@@ -1,10 +1,10 @@
 const allhelp = {
     "title":"This program determines the mean of a list of user-entered numbers.  The <span class='cx-fun'>append()</span> method is used to build the list.",
-    "4": "This is the signature of the getValues() function.",
+    "4": "This is the signature of the <span class='cx-fun'>getValues()</span> function.",
     "5": "Initialize the variable <span class='cx-var'>result</span> to an empty list.",
     "6": "Prompt the user to enter a value, and assign this to the variable <span class='cx-var'>entry</span>. "+
          "Note <span class='cx-var'>entry</span> will be a string, since <span class='cx-fun'>input()</span> returns a string.",
-    "7": "Use <span class='cx-key'>while</span> reptition to build the <span class='cx-var'>result</span> list, and continue prompting the user for values.",
+    "7": "Use <span class='cx-key'>while</span> repetition to build the <span class='cx-var'>result</span> list, and continue prompting the user for values.",
     "8": "Convert the user's entry to a float, and append it to the end of the list.",
     "9": "Prompt again for the user to enter a value, and assign this to the variable <span class='cx-var'>entry</var>.",
     "10": "Return the list <span class='cx-var'>result</span> to the calling statement.",

@@ -30,9 +30,9 @@ const allhelp = {
        "It is entered by the user, and subsequently used in the calculation of BMI ",
     "weight": "This variable stores weight (in pounds). "+
        "It is entered by the user, and subsequently used in the calculation of BMI ",
-    "bmi": "This variable stores bmi. "+
+    "bmi": "This variable stores BMI. "+
        "It is calculated based on height and weight, and then displayed.",
-    "anotherWeight": "This variable controls whether the while statement "+
+    "anotherWeight": "This variable controls whether the <span class='cx-key'>while</span> statement "+
        "repeats, in order to add another result of a weight and its corresponding BMI.",
 
        "display": "-", 

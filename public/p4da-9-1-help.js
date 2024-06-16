@@ -1,11 +1,11 @@
 const allhelp = {
-    "title":"This program builds a ditionary dynamically from user input.",
-    "3": "Create an empty dictionary named contacts.  Entries of email (key) and phone (value) will be added based on user input.",
+    "title":"This program builds a dictionary dynamically from user input.",
+    "3": "Create an empty dictionary named <span class='cx-var'>contacts</span>.  Entries of email (key) and phone (value) will be added based on user input.",
     "5": "Display directions to the user.",
     "6": "Get an initial entry from the user (email phone)",
     "7": "While the user's entry is not empty, process their input.",
     "8": "Split the user's entry into two parts.",
-    "9": "Add (or update) an entry to the dictionary using email as a key, and phone as the associated value.",
+    "9": "Add (or update) an entry to the dictionary using <span class='cx-var'>email</span> as a key, and <span class='cx-var'>phone</span> as the associated value.",
     "10": "Display the current contact dictionary.",
     "11": "Get a subsequent entry from the user (email phone)",
 

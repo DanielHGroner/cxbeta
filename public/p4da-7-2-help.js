@@ -6,7 +6,7 @@ const allhelp = {
          " The variable <span class='cx-var'>f</span> will be used in subsequent statements to read the data file one line at a time. "+
          "The second argument to <span class='cx-fun'>open()</span>, <span class='cx-str'>'r'</span>, indicates the file will be read from (as opposed to written to).",
     "7": "Read the first line of the file, and store it as a string in the variable <span class='cx-var'>line</span>.",
-    "10": "Using while repetition, continue reading the file if there is more data. "+
+    "10": "Using <span class='cx-key'>while</span> repetition, continue reading the file if there is more data. "+
           "Note <span class='cx-fun'>readline()</span> will return an empty string when all the data has been read, "+
           "i.e., there is no more data to read from the file.",
     "12": "Remove the trailing newline character from the line. "+

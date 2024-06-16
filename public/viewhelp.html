@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Help</title>
+    <link rel="stylesheet" href="cxbase.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .help-item {
+            margin-bottom: 10px;
+        }
+        .help-key {
+            font-weight: bold;
+        }
+        .underline {
+            text-decoration: underline;
+            color: red;
+        }
+    </style>
+    <!-- Version 1.3 -->
+</head>
+<body>
+    <h1>Help Contents</h1>
+    <div id="help-contents"></div>
+
+    <!-- Load Typo.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/typo-js@1.1.0/typo.js"></script>
+
+    <script>
+        // Function to get the value of a query parameter by name
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Function to dynamically load a JavaScript file
+        function loadScript(src, callback) {
+            const script = document.createElement('script');
+            script.src = src;
+            script.onload = callback;
+            document.head.appendChild(script);
+        }
+
+        // Function to check and underline words not in the dictionary
+        function underlineTypos(text, dictionary) {
+            // Create a temporary container to manipulate HTML content
+            const container = document.createElement('div');
+            container.innerHTML = text;
+
+            // Recursive function to process text nodes
+            function processNode(node) {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    const words = node.textContent.split(/\b(\w+)\b/);
+                    for (let i = 0; i < words.length; i++) {
+                        if (/\w+/.test(words[i]) && !dictionary.check(words[i])) {
+                            words[i] = `<span class="underline">${words[i]}</span>`;
+                        }
+                    }
+                    const newHtml = words.join('');
+                    const newSpan = document.createElement('span');
+                    newSpan.innerHTML = newHtml;
+                    node.replaceWith(...newSpan.childNodes);
+                } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName.toLowerCase() !== 'span') {
+                    for (const child of Array.from(node.childNodes)) {
+                        processNode(child);
+                    }
+                }
+            }
+
+            // Process all child nodes of the container
+            for (const child of Array.from(container.childNodes)) {
+                processNode(child);
+            }
+
+            return container.innerHTML;
+        }
+
+        // Function to display the contents of the allhelp variable
+        function displayHelp(dictionary) {
+            if (typeof allhelp !== 'undefined') {
+                const helpContentsDiv = document.getElementById('help-contents');
+                for (const [key, value] of Object.entries(allhelp)) {
+                    const helpItemDiv = document.createElement('div');
+                    helpItemDiv.classList.add('help-item');
+
+                    const helpKeySpan = document.createElement('span');
+                    helpKeySpan.classList.add('help-key');
+                    helpKeySpan.textContent = `${key}: `;
+
+                    const helpValueSpan = document.createElement('span');
+                    helpValueSpan.classList.add('help-value');
+                    helpValueSpan.innerHTML = underlineTypos(value, dictionary); // Underline typos
+
+                    helpItemDiv.appendChild(helpKeySpan);
+                    helpItemDiv.appendChild(helpValueSpan);
+
+                    helpContentsDiv.appendChild(helpItemDiv);
+                }
+            } else {
+                console.error('The variable allhelp is not defined.');
+            }
+        }
+
+        // Load the dictionary and then process the help file
+        fetch('https://cdn.jsdelivr.net/npm/typo-js@1.1.0/dictionaries/en_US/en_US.aff')
+            .then(response => response.text())
+            .then(affData => {
+                return fetch('https://cdn.jsdelivr.net/npm/typo-js@1.1.0/dictionaries/en_US/en_US.dic')
+                    .then(response => response.text())
+                    .then(dicData => {
+                        const dictionary = new Typo('en_US', affData, dicData);
+
+                        // Get the helpfile parameter from the URL
+                        const helpfile = getQueryParam('helpfile');
+                        if (helpfile) {
+                            // Load the specified JavaScript file and display its contents
+                            loadScript(helpfile, () => displayHelp(dictionary));
+                        } else {
+                            console.error('No helpfile parameter found in the URL.');
+                        }
+                    });
+            })
+            .catch(error => console.error('Error loading dictionary:', error));
+    </script>
+</body>
+</html>
