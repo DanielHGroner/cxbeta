@@ -10,8 +10,9 @@ const allhelp = {
          "The second argument to <span class='cx-fun'>open()</span>, <span class='cx-str'>'r'</span>, indicates the file will be read from (as opposed to written to).",
     "8": "Using <span class='cx-key'>for</span> repetition, read the data file one line at a time. ",
     "9": "Remove the trailing newline character from the line. "+
-          "Note <span class='cx-fun'>rstrip()</span> is a string method that strips off the indicated string; "+
-          "<span class='cx-str'>'\\n'</span> refers to the newline character.",
+          "Note <span class='cx-fun'>rstrip()</span> is a string method that strips off the indicated string from the end; "+
+          "<span class='cx-str'>'\\n'</span> refers to the newline character. "+
+          "Also, <span class='cx-fun'>strip()</span> removes blanks (whitespace) from the start and end of the string.",
     "10": "Check if the last line read was blank (only non-blank lines will be converted to numbers for averaging).",
     "11": "Convert the string <span class='cx-var'>line</span> to a <span class='cx-var'>float</span> value.",
     "12": "Display the latest value read.",

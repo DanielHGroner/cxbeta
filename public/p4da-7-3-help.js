@@ -7,7 +7,7 @@ const allhelp = {
          "The second argument to <span class='cx-fun'>open()</span>, <span class='cx-str'>'r'</span>, indicates the file will be read from (as opposed to written to).",
     "7": "Using <span class='cx-key'>for</span> repetition, read the file one line at a time. ",
     "9": "Remove the trailing newline character from the line. "+
-          "Note <span class='cx-fun'>rstrip()</span> is a string method that strips off the indicated string; "+
+          "Note <span class='cx-fun'>rstrip()</span> is a string method that strips off the indicated string from the end; "+
           "<span class='cx-str'>'\\n'</span> refers to the newline character.",
     "11": "Display the latest line read.",
     "14": "After all lines have been read from the file, close the file.",

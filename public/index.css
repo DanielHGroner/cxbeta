@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.toc-container {
+    width: 800px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chapter {
+    margin-bottom: 10px;
+}
+
+.chapter-btn {
+    width: 100%;
+    text-align: left;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.chapter-btn:hover {
+    background-color: #ddd;
+}
+
+.chapter-content {
+    display: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.chapter-content a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.chapter-content a:hover {
+    text-decoration: underline;
+}

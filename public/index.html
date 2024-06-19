@@ -1,14 +1,15 @@
 <html>
     <head>
         <link rel="stylesheet" href="cxbase.css">
+        <link rel="stylesheet" href="index.css">
         <style>
             .logo {
                 font-size:20px;
             }
-            .chapter {
+            /*.chapter {
                 font-size:16px;
                 font-weight:bold;
-            }
+            }*/
             header {
                position: fixed;
                top: 0;
@@ -21,9 +22,21 @@
                line-height: 15px; /* Center text vertically */
                box-sizing: border-box; /* Ensure padding is included in height calculation */
             }
+            footer {
+               position: fixed;
+               bottom: 0;
+               left: 0;
+               right: 0;
+               height: 40px; /* Set the height of the header */
+               background-color: whitesmoke;
+               padding: 10px;
+               text-align: center;
+               line-height: 15px; /* Center text vertically */
+               box-sizing: border-box; /* Ensure padding is included in height calculation */
+            }
         .content {
-            padding-top: 50px; /* Match this to the total height of the header (including padding) */
-            padding: 10px;
+            padding-top: 30px; /* Match this to the total height of the header (including padding) */
+            padding-bottom: 20px; /* Match this to the total height of the footer (including padding) */
         }
         </style>
     </head>
@@ -31,52 +44,103 @@
         <header>
         <span class="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span><sup style="font-size:50%">TM</sup>
         </header>
-        <br><br>
-        <div class="content">
-        <div style="line-height:2">
-           <div class="chapter">Chapter 2: Variables and Statements</div>
-              &nbsp;<a href="p4da-2-5.html" target="_blank">Program 2-5: Calculate the total of two numbers</a><br>
-              &nbsp;<a href="p4da-2-6.html" target="_blank">Program 2-6: Calculate BMI from height and weight</a><br>
-           <div class="chapter">Chapter 3: Decisions</div>
-              &nbsp;<a href="p4da-3-6.html" target="_blank">Program 3-6: Calculate ending balance of a 1-year CD (2 rates, if/else)</a><br>
-              &nbsp;<a href="p4da-3-8.html" target="_blank">Program 3-8: Calculate ending balance of a 1-year CD (3 rates, if/elif/else)</a><br>
-              &nbsp;<a href="p4da-3-9.html" target="_blank">Program 3-9: Calculate ending balance of a 1-year CD (new vs. existing customers; nested if)</a><br>
-           <div class="chapter">Chapter 4: Repetition</div>
-              &nbsp;<a href="p4da-4-1.html" target="_blank">Program 4-1: With while, generate a table of squares and cubes</a><br>
-              &nbsp;<a href="p4da-4-2.html" target="_blank">Program 4-2: With while, cumulate a set of user-entered numbers</a><br>
-              &nbsp;<a href="p4da-4-3.html" target="_blank">Program 4-3: With while, find the maximum of a set of user-entered numbers</a><br>
-              &nbsp;<a href="p4da-4-4.html" target="_blank">Program 4-4: With while, generate BMIs for different weights</a><br>
-              &nbsp;<a href="p4da-4-6.html" target="_blank">Program 4-6: With while, generate BMIs for different weights (special end value)</a><br>
-              &nbsp;<a href="p4da-4-8.html" target="_blank">Program 4-8: With for, generate a table of squares and cubes</a><br>
-           <div class="chapter">Chapter 5: Defining Functions</div>
-              &nbsp;<a href="p4da-5-1.html" target="_blank">Program 5-1: Define and call a function to display a greeting</a><br>
-              &nbsp;<a href="p4da-5-2.html" target="_blank">Program 5-2: Define and call a function with one input and one output</a><br>
-              &nbsp;<a href="p4da-5-3.html" target="_blank">Program 5-3: Define and call a function with two inputs and one output</a><br>
-              &nbsp;<a href="p4da-5-4.html" target="_blank">Program 5-4: Define and call a function with three inputs (one passed as a constant)</a><br>
-              &nbsp;<a href="p4da-5-5.html" target="_blank">Program 5-5: Define and call a function with four inputs (including one named parameter)</a><br>
-              &nbsp;<a href="p4da-5-6.html" target="_blank">Program 5-6: Define and call a function with two outputs</a><br>
-           <div class="chapter">Chapter 6: Lists</div>
-              &nbsp;<a href="p4da-6-1.html" target="_blank">Program 6-1: With lists, translate Air Quality Index (AQI) from number to color and concern</a><br>
-              &nbsp;<a href="p4da-6-2.html" target="_blank">Program 6-2: Build a list with user-entered values, and calculate its average</a><br>
-              &nbsp;<a href="p4da-6-4.html" target="_blank">Program 6-4: With for, determine the average of a list</a><br>
-              &nbsp;<a href="p4da-6-8.html" target="_blank">Program 6-8: Determine the number of items below/above a value</a><br>
-           <div class="chapter">Chapter 7: Reading & Writing Files</div>
-              &nbsp;<a href="p4da-7-1.html" target="_blank">Program 7-1: Read one line from a file and display it to the screen</a><br>
-              &nbsp;<a href="p4da-7-2.html" target="_blank">Program 7-2: With while, read a file and echo its lines to the screen</a><br>
-              &nbsp;<a href="p4da-7-3.html" target="_blank">Program 7-3: With for, read a file and echo its lines to the screen</a><br>
-              &nbsp;<a href="p4da-7-4.html" target="_blank">Program 7-4: With for, read a file of numbers and calculate and display their average</a><br>
-              &nbsp;<a href="p4da-7-7.html" target="_blank">Program 7-7: Prompt for input and write a single line to a file</a><br>
-           <div class="chapter">Chapter 8: Strings in Detail</div>
-              &nbsp;<a href="p4da-8-1.html" target="_blank">Program 8-1: # Simple text processor with assignment and concatenation</a><br>
-            <div class="chapter">Chapter 9: Dictionaries and Sets</div>
-              &nbsp;<a href="p4da-9-1.html" target="_blank">Program 9-1: # Build a contact dictionary dynamically from user input</a><br>
-
+        <br><br><br>
+        <img src="images/p4da-cover.png" style="width:7.5%; height:auto; float:left;margin-left:10px"/>
+        <div class="content toc-container">
+         <div class="chapter">
+            <button class="chapter-btn">
+               <span><img src="images/p4da-ch2-icon.png" class="ch-icon-toc"/></span>
+               Chapter 2: Variables and Statements
+            </button>
+            <div class="chapter-content">
+                <a href="p4da-2-5.html" target="_blank">Program 2-5: Calculate the total of two numbers</a>
+                <a href="p4da-2-6.html" target="_blank">Program 2-6: Calculate BMI from height and weight</a>
             </div>
-        <br>
-            <!--footer id="footer"-->(c) 2024 Rose River Software, LLC &nbsp;&nbsp;&nbsp;
+         </div>
+         <div class="chapter">
+            <button class="chapter-btn">
+               <span> <img src="images/p4da-ch3-icon.png" class="ch-icon-toc"/></span>
+               Chapter 3: Decisions
+            </button>
+            <div class="chapter-content">
+               <a href="p4da-3-6.html" target="_blank">Program 3-6: Calculate ending balance of a 1-year CD (2 rates, if/else)</a>
+               <a href="p4da-3-8.html" target="_blank">Program 3-8: Calculate ending balance of a 1-year CD (3 rates, if/elif/else)</a>
+               <a href="p4da-3-9.html" target="_blank">Program 3-9: Calculate ending balance of a 1-year CD (new vs. existing customers; nested if)</a>
+             </div>
+         </div>
+         <div class="chapter">
+            <button class="chapter-btn">
+               <span><img src="images/p4da-ch4-icon.png" class="ch-icon-toc"/></span>
+               Chapter 4: Repetition</button>
+            <div class="chapter-content">
+               <a href="p4da-4-1.html" target="_blank">Program 4-1: With while, generate a table of squares and cubes</a>
+               <a href="p4da-4-2.html" target="_blank">Program 4-2: With while, cumulate a set of user-entered numbers</a>
+               <a href="p4da-4-3.html" target="_blank">Program 4-3: With while, find the maximum of a set of user-entered numbers</a>
+               <a href="p4da-4-4.html" target="_blank">Program 4-4: With while, generate BMIs for different weights</a>
+               <a href="p4da-4-6.html" target="_blank">Program 4-6: With while, generate BMIs for different weights (special end value)</a>
+               <a href="p4da-4-8.html" target="_blank">Program 4-8: With for, generate a table of squares and cubes</a>
+             </div>
+         </div>
+         <div class="chapter">
+            <button class="chapter-btn">
+               <span><img src="images/p4da-ch5-icon.png" class="ch-icon-toc"/></span>
+               Chapter 5: Defining Functions</button>
+            <div class="chapter-content">
+               <a href="p4da-5-1.html" target="_blank">Program 5-1: Define and call a function to display a greeting</a>
+               <a href="p4da-5-2.html" target="_blank">Program 5-2: Define and call a function with one input and one output</a>
+               <a href="p4da-5-3.html" target="_blank">Program 5-3: Define and call a function with two inputs and one output</a>
+               <a href="p4da-5-4.html" target="_blank">Program 5-4: Define and call a function with three inputs (one passed as a constant)</a>
+               <a href="p4da-5-5.html" target="_blank">Program 5-5: Define and call a function with four inputs (including one named parameter)</a>
+               <a href="p4da-5-6.html" target="_blank">Program 5-6: Define and call a function with two outputs</a>
+             </div>
+         </div>
+         <div class="chapter">
+            <button class="chapter-btn">
+               <span><img src="images/p4da-ch6-icon.png" class="ch-icon-toc"/></span>
+               Chapter 6: Lists</button>
+            <div class="chapter-content">
+               <a href="p4da-6-1.html" target="_blank">Program 6-1: With lists, translate Air Quality Index (AQI) from number to color and concern (with for, break)</a>
+               <a href="p4da-6-1b.html" target="_blank">Program 6-1b: With lists, translate Air Quality Index (AQI) from number to color and concern (with while)</a>
+               <a href="p4da-6-2.html" target="_blank">Program 6-2: Build a list with user-entered values, and calculate its average</a>
+               <a href="p4da-6-4.html" target="_blank">Program 6-4: With for, determine the average of a list</a>
+               <a href="p4da-6-8.html" target="_blank">Program 6-8: Determine the number of items below/above a value</a>
+             </div>
+         </div>
+         <div class="chapter">
+            <button class="chapter-btn">
+               <span><img src="images/p4da-ch7-icon.png" class="ch-icon-toc"/></span>
+               Chapter 7: Reading & Writing Files</button>
+            <div class="chapter-content">
+               <a href="p4da-7-1.html" target="_blank">Program 7-1: Read one line from a file and display it to the screen</a>
+               <a href="p4da-7-2.html" target="_blank">Program 7-2: With while, read a file and echo its lines to the screen</a>
+               <a href="p4da-7-3.html" target="_blank">Program 7-3: With for, read a file and echo its lines to the screen</a>
+               <a href="p4da-7-4.html" target="_blank">Program 7-4: With for, read a file of numbers and calculate and display their average</a>
+               <a href="p4da-7-7.html" target="_blank">Program 7-7: Prompt for input and write a single line to a file</a>
+             </div>
+         </div>
+         <div class="chapter">
+            <button class="chapter-btn">
+               <span><img src="images/p4da-ch8-icon.png" class="ch-icon-toc"/></span>
+               Chapter 8: Strings in Detail</button>
+            <div class="chapter-content">
+               <a href="p4da-8-1.html" target="_blank">Program 8-1: Simple text processor with assignment and concatenation</a>
+            </div>
+         </div>
+         <div class="chapter">
+            <button class="chapter-btn">
+               <span><img src="images/p4da-ch9-icon.png" class="ch-icon-toc"/></span>
+               Chapter 9: Dictionaries and Sets</button>
+            <div class="chapter-content">
+               <a href="p4da-9-1.html" target="_blank">Program 9-1: Build a contact dictionary dynamically from user input</a>
+            </div>
+         </div>
+
+      </div>
+
+      <footer id="footer"-->(c) 2024 Rose River Software, LLC &nbsp;&nbsp;&nbsp;
             <a href="cx-terms.html" target="_blank">Terms of Use</a> &nbsp;&nbsp;&nbsp;
             <a href="cx-help.pdf" target="_blank">Overview</button></a>
-            <!--/footer-->
-    </div>
-    </body>
+      </footer>
+      <script src="index.js"></script>
+   </body>
 </html>

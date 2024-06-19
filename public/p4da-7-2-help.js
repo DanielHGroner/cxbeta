@@ -10,7 +10,7 @@ const allhelp = {
           "Note <span class='cx-fun'>readline()</span> will return an empty string when all the data has been read, "+
           "i.e., there is no more data to read from the file.",
     "12": "Remove the trailing newline character from the line. "+
-          "Note <span class='cx-fun'>rstrip()</span> is a string method that strips off the indicated string; "+
+          "Note <span class='cx-fun'>rstrip()</span> is a string method that strips off the indicated string from the end; "+
           "<span class='cx-str'>'\\n'</span> refers to the newline character.",
     "14": "Display the latest line read.",
     "17": "Read the next line from the file. "+

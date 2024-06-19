@@ -13,7 +13,7 @@ body {
     display: flex;
     /*flex-grow: 1;*/
     /*min-height: 100vh; /* Set a minimum height for the container */
-    /*padding-bottom: 60px; /* Add padding-bottom to prevent content overlap */
+    padding-bottom: 40px; /* Add padding-bottom to prevent content hidden w/ footer */
     /*border-bottom: 1px solid #ddd; Add a bottom border for the container */
   }
   
@@ -39,8 +39,18 @@ body {
   footer {
     position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-  }
+    /* height: 40px; /* Set the height of the footer */
+    background-color: whitesmoke;
+    padding: 10px;
+    text-align: center;
+    line-height: 15px; /* Center text vertically */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
+    height: 2.5rem;
+    font-size: 80%;
+}
 
 svg { /* add this to establish canvas position/size */
   position: absolute;

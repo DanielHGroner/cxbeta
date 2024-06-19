@@ -7,7 +7,7 @@ const allhelp = {
          "The second argument to <span class='cx-fun'>open()</span>, <span class='cx-str'>'r'</span>, indicates the file will be read from (as opposed to written to).",
     "7": "Read the first line of the file, and store it as a string in the variable <span class='cx-var'>aline</span>.",
     "10": "Remove the trailing newline character from <span class='cx-var'>aline</span>. "+
-          "Note <span class='cx-fun'>rstrip()</span> is a string method that strips off the indicated string; "+
+          "Note <span class='cx-fun'>rstrip()</span> is a string method that strips off the indicated string from the end; "+
           "<span class='cx-str'>'\\n'</span> refers to the newline character.",
     "12": "Display the line read.",
     "15": "After the line has been read from the file, close the file.",
