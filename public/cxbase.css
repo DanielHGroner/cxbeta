@@ -69,7 +69,10 @@ td {
 }
 
 .book-icon {
-    width:3%;
+    width:2.25%;
     height:auto;
-    margin-right:5px;
+    position:absolute;
+    left:5px;
+    top: 50%;
+    transform: translateY(-50%);
 }

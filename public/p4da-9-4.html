@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="cxlinenums.css">
     </head>
     <body>
-        <header><span class="help-span cx-hilitable" id="title"><b>Program 2-5</b>: Calculate the total of two numbers</span>
-        <span><img src="images/p4da-ch2-icon.png" class="ch-icon" style="float:right"/></span>
+        <header><span class="help-span cx-hilitable" id="title"><b>Program 9-4</b>: Dictionary example to display all keys and values</span>
+            <span><img src="images/p4da-ch9-icon.png" class="ch-icon" style="float:right"/></span>    
         </header>
         <div id="help-container"></div>
         <div id="copy-message">Code copied to clipboard</div>
@@ -17,17 +17,16 @@
 <section class="left">
 <div class="linenums-and-code">
 <div id="line-numbers-container"></div>
-<pre><code id="code"><span class="cx-com"># Calculate the total of two numbers</span>
+<pre><code id="code"><span class="cx-com"># Dictionary example to display all keys and values</span>
 
-<span class="cx-com"># Prompt for inputs</span>
-<span class="cx-sta cx-hilitable help-span" id="4"><span class="cx-var">value1</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">"Enter a number: "</span>))</span>
-<span class="cx-sta cx-hilitable help-span" id="5"><span class="cx-var">value2</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">"Enter another number: "</span>))</span>
+<span class="cx-statement cx-hilitable help-span" id="3"><span class="cx-var">contacts</span> = {<span class="cx-str">'jsmith@mymail.com'</span>: <span class="cx-str">'801-555-1223'</span>,
+            <span class="cx-str">'jdoe12@mymail.com'</span>: <span class="cx-str">'801-555-9887'</span>}</span>
 
-<span class="cx-com"># Sum the variables values</span>
-<span class="cx-sta cx-hilitable help-span" id="8"><span class="cx-var">total</span> = <span class="cx-var">value1</span> + <span class="cx-var">value2</span></span>
+<span class="cx-statement cx-hilitable help-span" id="6"><span class="cx-key">for</span> <span class="cx-var">email</span>, <span class="cx-var">phone</span> <span class="cx-key">in</span> <span class="cx-var">contacts</span>.<span class="cx-fun">items</span>():</span>
+    <span class="cx-statement cx-hilitable help-span" id="7"><span class="cx-fun">print</span>(<span class="cx-var">email</span>, <span class="cx-var">phone</span>)</span>
 
-<span class="cx-com"># Display the result</span>
-<span class="cx-sta cx-hilitable help-span" id="11"><span class="cx-fun">print</span>(<span class="cx-var">total</span>)</span></code></pre>
+<span class="cx-statement cx-hilitable help-span" id="9"><span class="cx-fun">print</span>(<span class="cx-fun">len</span>(<span class="cx-var">contacts</span>), <span class="cx-str">'contacts in dictionary'</span>)</span>
+ </code></pre>
 </div>
 <br>
 <input type="checkbox" id="toggle-line-numbers" title="show/hide line numbers"><span id='toggle-line-numbers-text'>Line #s</span></input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -36,9 +35,9 @@
 <section class="right">
 <span class="cx-varheading">VARIABLES:</span><p>
 <code><table>    
-<tr><td id="-value1"></td><td>float</td><td><span id="value1" class="cx-var cx-hilitable help-span">value1</span></td></tr>
-<tr><td id="-value2"></td><td>float</td><td><span id="value2" class="cx-var cx-hilitable help-span">value2</span></td></tr>
-<tr><td id="-total"></td><td>float</td><td><span id="total" class="cx-var cx-hilitable help-span">total</span></td></tr>
+<tr><td id="-contacts"></td><td>dict[str,str]</td><td><span id="contacts" class="cx-var cx-hilitable help-span">contacts</span></td></tr>
+<tr><td id="-email"></td><td>str</td><td><span id="email" class="cx-var cx-hilitable help-span">email</span></td></tr>
+<tr><td id="-phone"></td><td>str</td><td><span id="phone" class="cx-var cx-hilitable help-span">phone</span></td></tr>
 </table></code>
 <br>
 <span class="cx-varheading">INPUT / OUTPUT:</span><p>
@@ -48,8 +47,9 @@
 </table></code>    
 </section>
 </div>
+<svg id="svgElem"></svg>
         <footer id="footer">
-            <span><img src="images/p4da-book-icon.png" class="book-icon"/></span>
+            <img src="images/p4da-book-icon.png" class="book-icon" style="float:left"/>
             <input type="checkbox" id="help-toggle" title="display help for CodeXplorer" checked>Show help</input>&nbsp;&nbsp;&nbsp;
             <span id="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span>
             <span id="copyright">(c) 2024 Rose River Software, LLC</span> &nbsp;&nbsp;&nbsp;
@@ -60,8 +60,12 @@
         <script src="cxhelp.js" defer></script>
         <script src="cxhilite.js"></script>
         <script src="cxhide.js"></script>
-        <script src="p4da-2-5-help.js" defer></script>
-        <script src="p4da-2-5-hilite.js"></script>
+        <script src="p4da-9-4-help.js" defer></script>
+        <script src="p4da-9-4-hilite.js"></script>
+
+        <script src="cxarrows.js"></script>
+        <script src="cxarrowcb.js"></script>
+        <script src="p4da-9-4-arrows.js"></script>
 
         <script src="cxlinenums.js"></script>
         <script>
