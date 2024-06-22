@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cxbase.css">
+        <link rel="stylesheet" href="cxcopy.css">
+        <link rel="stylesheet" href="cxhelp.css">
+        <link rel="stylesheet" href="cxhilite.css">
+        <link rel="stylesheet" href="cxlayout.css">
+        <link rel="stylesheet" href="cxlinenums.css">
+    </head>
+    <body>
+        <header><span id="title" class="cx-hilitable help-span"><b>Program 3-7</b>: With if/elif/else, determine if a user-entered number is positive, negative, or zero</span>
+            <span><img src="images/p4da-ch3-icon.png" class="ch-icon" style="float:right"/></span>    
+        </header>
+        <div id="help-container"></div>
+        <div id="copy-message">Code copied to clipboard</div>
+<div class="container">
+<section class="left">
+<div class="linenums-and-code">
+<div id="line-numbers-container"></div>        
+<pre><code id="code"><span class="cx-sta cx-hilitable help-span" id="1"><span class="cx-var">userNumber</span> = <span class="cx-fun">float</span>(<span class="cx-fun">input</span>(<span class="cx-str">'Please enter a number: '</span>))</span>
+<span class="cx-sta cx-hilitable help-span" id="2"><span class="cx-key">if</span> <span class="cx-var">userNumber</span> &gt; <span class="cx-num">0</span>:</span>
+    <span class="cx-sta cx-hilitable help-span" id="3"><span class="cx-fun">print</span>(<span class="cx-str">'The value you entered was positive'</span>)</span>
+<span class="cx-sta cx-hilitable help-span" id="4"><span class="cx-key">elif</span> <span class="cx-var">userNumber</span> &lt; <span class="cx-num">0</span>:</span>
+    <span class="cx-sta cx-hilitable help-span" id="5"><span class="cx-fun">print</span>(<span class="cx-str">'The value you entered was negative'</span>)</span>
+<span class="cx-sta cx-hilitable help-span" id="6"><span class="cx-key">else</span>:</span>
+    <span class="cx-sta cx-hilitable help-span" id="7"><span class="cx-fun">print</span>(<span class="cx-str">'The value you entered was zero'</span>)</span>
+<span class="cx-sta cx-hilitable help-span" id="8"> </span></code></pre>
+</div>
+<br>
+<input type="checkbox" id="toggle-line-numbers" title="show/hide line numbers"><span id='toggle-line-numbers-text'>Line #s</span></input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<button id="copy-button" title="copy code to clipboard">Copy</button>
+</section>
+<section class="right">
+<span class="cx-varheading">VARIABLES:</span><code><p>
+<table>    
+<tr><td></td><td>float</td><td><span id="userNumber" class="cx-var cx-hilitable help-span">userNumber</span></td></tr>
+</table></code>
+<br>
+<span class="cx-varheading">INPUT / OUTPUT:</span><p>
+<code><table>    
+<tr><td></td><td><image src="console-display.png"/></td><td><span id="display" class="cx-hilitable help-span">[display]</span></td></tr>
+<tr><td></td><td><image src="console-keyboard.png"/></td><td><span id="keyboard" class="cx-hilitable help-span">[keyboard]</span></td></tr>
+</table></code>    
+</section>
+</div>
+<svg id="svgElem"></svg>
+        <footer id="footer">
+            <span><img src="images/p4da-book-icon.png" class="book-icon" style="float:left"/></span>
+            <input type="checkbox" id="help-toggle" title="display help for CodeXplorer" checked>Show help</input>&nbsp;&nbsp;&nbsp;
+            <span id="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span>
+            <span id="copyright">(c) 2024 Rose River Software, LLC</span> &nbsp;&nbsp;&nbsp;
+            <a href="cx-terms.html" target="_blank" title="display Terms of Use for CodeXplorer">Terms of Use</a>&nbsp;&nbsp;&nbsp;
+            <a href="cx-help.pdf" target="_blank" title="display Overview for CodeXplorer">Overview</a>
+        </footer>
+        <script src="cxcopy.js"></script>
+        <script src="cxhelp.js" defer></script>
+        <script src="cxhilite.js"></script>
+        <script src="cxhide.js"></script>
+        <script src="p4da-3-7-help.js"></script>
+        <script src="p4da-3-7-hilite.js"></script>
+
+        <script src="cxarrows.js"></script>
+        <script src="cxarrowcb.js"></script>
+        <script src="p4da-3-7-arrows.js"></script>
+
+        <script src="cxlinenums.js"></script>
+        <script>
+            const lineNumbers = new LineNumbers('line-numbers-container', 'code', false, 'toggle-line-numbers');
+        </script>
+    </body>
+</html>
