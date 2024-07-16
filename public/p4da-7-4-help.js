@@ -6,7 +6,7 @@ const allhelp = {
    "4": "Initialize the <span class='cx-var'>total</span> variable to 0.",
    "5": "Initialize the variable <span class='cx-var'>i</span> to 0.  <span class='cx-var'>i</span> keeps track of how many lines have been read from the data file.",
    "7": "The <span class='cx-fun'>open()</span> function associates the variable <span class='cx-var'>f</span> with the file measures.txt. "+
-         " The variable <span class='cx-var'>f</span> will be used in subsequent statements to read the data file one line at a time. "+
+         " The variable <span class='cx-var'>f</span> will be used in the subsequent <span class='cx-key'>for</span> statement to read the data file one line at a time. "+
          "The second argument to <span class='cx-fun'>open()</span>, <span class='cx-str'>'r'</span>, indicates the file will be read from (as opposed to written to).",
     "8": "Using <span class='cx-key'>for</span> repetition, read the data file one line at a time. ",
     "9": "Remove the trailing newline character from the line. "+

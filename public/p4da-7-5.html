@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cxbase.css">
+        <link rel="stylesheet" href="cxcopy.css">
+        <link rel="stylesheet" href="cxhelp.css">
+        <link rel="stylesheet" href="cxhilite.css">
+        <link rel="stylesheet" href="cxlayout.css">
+        <link rel="stylesheet" href="cxlinenums.css">
+    </head>
+    <body>
+        <header><span class="help-span cx-hilitable" id="title"><b>Program 7-5</b>: Read a file with product information and calculate their EOQs</span>
+            <span><img src="images/p4da-ch7-icon.png" class="ch-icon" style="float:right"/></span>    
+        </header>
+        <div id="help-container"></div>
+        <div id="copy-message">Code copied to clipboard</div>
+<div class="container">
+<section class="left">
+<div class="linenums-and-code">
+<div id="line-numbers-container"></div>
+<pre><code id="code"><span class="cx-com"># read a file with product information and calculate their EOQs</span>
+
+<span class="cx-com"># calculate an economic order quantity for given parameters</span>
+<span class="cx-statement cx-hilitable help-span" id="4"><span class="cx-key">def</span> <span class="cx-fun">calcEOQ</span>(<span class="cx-var">demand</span>, <span class="cx-var">orderCost</span>, <span class="cx-var">holdingCost</span>):</span>
+    <span class="cx-statement cx-hilitable help-span" id="5"><span class="cx-var">result</span> = (<span class="cx-num">2</span> * <span class="cx-var">demand</span> * <span class="cx-var">orderCost</span> / <span class="cx-var">holdingCost</span>) ** <span class="cx-num">.5</span></span>
+    <span class="cx-statement cx-hilitable help-span" id="6"><span class="cx-key">return</span> <span class="cx-var">result</span></span>
+
+<span class="cx-statement cx-hilitable help-span" id="8"><span class="cx-var">f</span> = <span class="cx-fun">open</span>(<span class="cx-str">'eoq.txt'</span>, <span class="cx-str">'r'</span>)</span>
+<span class="cx-statement cx-hilitable help-span" id="9"><span class="cx-var">f</span>.<span class="cx-fun">readline</span>()</span> <span class="cx-com"># skip over the file's header line</span>
+<span class="cx-statement cx-hilitable help-span" id="10"><span class="cx-key">for</span> <span class="cx-var">line</span> <span class="cx-key">in</span> <span class="cx-var">f</span>:</span>
+    <span class="cx-statement cx-hilitable help-span" id="11"><span class="cx-var">line</span> = <span class="cx-var">line</span>.<span class="cx-fun">rstrip</span>(<span class="cx-str">'\n'</span>).<span class="cx-fun">strip</span>()</span>
+    <span class="cx-statement cx-hilitable help-span" id="12"><span class="cx-key">if</span> <span class="cx-var">line</span> != <span class="cx-str">''</span>:</span> <span class="cx-com"># skip over lines with no data</span>
+        <span class="cx-statement cx-hilitable help-span" id="13"><span class="cx-var">fields</span> = <span class="cx-var">line</span>.<span class="cx-fun">split</span>(<span class="cx-str">','</span>)</span>
+        <span class="cx-statement cx-hilitable help-span" id="14"><span class="cx-var">id</span> = <span class="cx-var">fields</span>[<span class="cx-num">0</span>]</span>
+        <span class="cx-statement cx-hilitable help-span" id="15"><span class="cx-var">demand</span> = <span class="cx-fun">int</span>(<span class="cx-var">fields</span>[<span class="cx-num">1</span>])</span>
+        <span class="cx-statement cx-hilitable help-span" id="16"><span class="cx-var">orderCost</span> = <span class="cx-fun">float</span>(<span class="cx-var">fields</span>[<span class="cx-num">2</span>])</span>
+        <span class="cx-statement cx-hilitable help-span" id="17"><span class="cx-var">holdingCost</span> = <span class="cx-fun">float</span>(<span class="cx-var">fields</span>[<span class="cx-num">3</span>])</span>
+        <span class="cx-statement cx-hilitable help-span" id="18"><span class="cx-fun">print</span>(<span class="cx-str">"product fields:"</span>, <span class="cx-var">id</span>, <span class="cx-var">demand</span>, <span class="cx-var">orderCost</span>, <span class="cx-var">holdingCost</span>)</span>
+        <span class="cx-statement cx-hilitable help-span" id="19"><span class="cx-var">eoq</span> = <span class="cx-fun">calcEOQ</span>(<span class="cx-var">demand</span>, <span class="cx-var">orderCost</span>, <span class="cx-var">holdingCost</span>)</span>
+        <span class="cx-statement cx-hilitable help-span" id="20"><span class="cx-fun">print</span>(<span class="cx-str">"EOQ for"</span>, <span class="cx-var">id</span>+<span class="cx-str">":"</span>, <span class="cx-fun">round</span>(<span class="cx-var">eoq</span>,<span class="cx-num">0</span>))</span>
+<span class="cx-statement cx-hilitable help-span" id="21"><span class="cx-var">f</span>.<span class="cx-fun">close</span>()</span></code></pre>
+</div>
+<br>
+<input type="checkbox" id="toggle-line-numbers" title="show/hide line numbers"><span id='toggle-line-numbers-text'>Line #s</span></input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<button id="copy-button" title="copy code to clipboard">Copy</button>
+</section>
+<section class="right">
+<span class="cx-varheading">VARIABLES:</span><p>
+<code>
+&nbsp;<u>calcEOQ()</u>:
+<table>
+<tr><td></td><td>int</td><td><span id="calcEOQ.demand" class="cx-var cx-hilitable help-span">demand</span></td></tr>
+<tr><td></td><td>float</td><td><span id="calcEOQ.orderCost" class="cx-var cx-hilitable help-span">orderCost</span></td></tr>
+<tr><td></td><td>float</td><td><span id="calcEOQ.holdingCost" class="cx-var cx-hilitable help-span">holdingCost</span></td></tr>
+<tr><td></td><td>float</td><td><span id="calcEOQ.result" class="cx-var cx-hilitable help-span">result</span></td></tr>
+</table><p>
+&nbsp;<u>global</u>:
+<table>    
+<tr><td id="-f"></td><td>TextIOWrapper</td><td><span id="f" class="cx-var cx-hilitable help-span">f</span></td></tr>
+<tr><td id="-line"></td><td>str</td><td><span id="line" class="cx-var cx-hilitable help-span">line</span></td></tr>
+<tr><td id="-fields"></td><td>list[str]</td><td><span id="fields" class="cx-var cx-hilitable help-span">fields</span></td></tr>
+<tr><td id="-id"></td><td>str</td><td><span id="id" class="cx-var cx-hilitable help-span">id</span></td></tr>
+<tr><td></td><td>int</td><td><span id="demand" class="cx-var cx-hilitable help-span">demand</span></td></tr>
+<tr><td></td><td>float</td><td><span id="orderCost" class="cx-var cx-hilitable help-span">orderCost</span></td></tr>
+<tr><td></td><td>float</td><td><span id="holdingCost" class="cx-var cx-hilitable help-span">holdingCost</span></td></tr>
+<tr><td></td><td>float</td><td><span id="eoq" class="cx-var cx-hilitable help-span">eoq</span></td></tr>
+</table></code>
+<br>
+<span class="cx-varheading">INPUT / OUTPUT:</span><p>
+<code>
+<table>    
+<tr><td></td><td><image src="console-display.png"/></td><td><span id="display" class="cx-hilitable help-span">[display]</span></td></tr>
+<tr><td></td><td><image src="console-keyboard.png"/></td><td><span id="keyboard" class="cx-hilitable help-span">[keyboard]</span></td></tr>
+<tr><td></td><td><image src="file-icon.png"/></td><td><span id="file" class="cx-hilitable help-span">[file:eoq.txt]</span></td></tr>
+</table></code>    
+</section>
+</div>
+<svg id="svgElem"></svg>
+        <footer id="footer">
+            <span><img src="images/p4da-book-icon.png" class="book-icon" style="float:left"/></span>
+            <input type="checkbox" id="help-toggle" title="display help for CodeXplorer" checked>Show help</input>&nbsp;&nbsp;&nbsp;
+            <span id="logo"><tt>Code</tt><span style="color:green"><i>Xplorer</i></span></span>
+            <span id="copyright">(c) 2024 Rose River Software, LLC</span> &nbsp;&nbsp;&nbsp;
+            <a href="cx-terms.html" target="_blank" title="display Terms of Use for CodeXplorer">Terms of Use</a>&nbsp;&nbsp;&nbsp;
+            <a href="cx-help.pdf" target="_blank" title="display Overview for CodeXplorer">Overview</a>
+        </footer>
+        <script src="cxcopy.js"></script>
+        <script src="cxhelp.js" defer></script>
+        <script src="cxhilite.js"></script>
+        <script src="cxhide.js"></script>
+        <script src="p4da-7-5-help.js" defer></script>
+        <script src="p4da-7-5-hilite.js"></script>
+
+        <script src="cxarrows.js"></script>
+        <script src="cxarrowcb.js"></script>
+        <script src="p4da-7-5-arrows.js"></script>
+
+        <script src="cxlinenums.js"></script>
+        <script>
+            const lineNumbers = new LineNumbers('line-numbers-container', 'code', false, 'toggle-line-numbers');
+        </script>        
+    </body>
+</html>
